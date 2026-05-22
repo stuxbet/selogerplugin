@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from flask import Response, current_app, jsonify, request
 
-from ..core.exceptions import TenantNotFound, ValidationError
+from ..core.exceptions import ConfigError, TenantNotFound, ValidationError
 from ._common import (
     build_listing_service,
     extract_template_id,
@@ -23,15 +23,17 @@ def handle_update() -> Response:
     except ValidationError as exc:
         return jsonify({"status": "bad_request", "detail": str(exc)}), 400
 
-    svc = build_listing_service(
-        tenant=tenant,
-        credentials=current_app.config["AVIV_CREDENTIALS"],
-        token_cache=current_app.config["AVIV_TOKEN_CACHE"],
-        public_base_url=tenant.odoo.base_url,
-        aviv_base_url=current_app.config["AVIV_BASE_URL"],
-    )
     try:
+        svc = build_listing_service(
+            tenant=tenant,
+            credentials=current_app.config["AVIV_CREDENTIALS"],
+            token_cache=current_app.config["AVIV_TOKEN_CACHE"],
+            public_base_url=tenant.odoo.base_url,
+            aviv_base_url=current_app.config["AVIV_BASE_URL"],
+        )
         outcome = svc.update(template_id)
+    except ConfigError as exc:
+        return jsonify({"status": "config_error", "detail": str(exc)}), 503
     except ValidationError as exc:
         return jsonify({"status": "validation_error", "detail": str(exc)}), 422
 

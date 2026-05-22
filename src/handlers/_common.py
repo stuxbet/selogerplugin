@@ -22,6 +22,7 @@ from ..clients.odoo import OdooClient
 from ..core.auth import AvivCredentials, TokenCache
 from ..core.exceptions import (
     AvivAPIError,
+    ConfigError,
     TenantNotFound,
     ValidationError,
 )
@@ -71,6 +72,7 @@ def resolve_tenant_from_request() -> Tenant:
 def build_listing_service(*, tenant: Tenant, credentials: AvivCredentials,
                           token_cache: TokenCache, public_base_url: str,
                           aviv_base_url: str) -> ListingService:
+    credentials.ensure_complete()
     odoo = OdooClient.for_tenant(tenant.odoo)
     aviv = AvivClient.for_intermediary(
         credentials=credentials,

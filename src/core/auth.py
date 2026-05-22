@@ -34,18 +34,35 @@ class CachedToken:
 
 @dataclass
 class AvivCredentials:
-    """Client-level credentials. Per-integrator (one set, regardless of tenant)."""
+    """Client-level credentials. Per-integrator (one set, regardless of tenant).
+
+    Construction is intentionally permissive: empty fields are allowed so the
+    Flask app can boot before the operator has configured the AVIV secrets
+    in their hosting platform. Call :meth:`ensure_complete` from the
+    request path to fail fast with a clear error when something tries to
+    actually talk to AVIV without credentials.
+    """
 
     client_id: str
     client_secret: str
     audience: str
     user_agent: str
 
-    def __post_init__(self) -> None:
+    def is_complete(self) -> bool:
+        return all(
+            getattr(self, name)
+            for name in ("client_id", "client_secret", "audience", "user_agent")
+        )
+
+    def ensure_complete(self) -> None:
         missing = [name for name in ("client_id", "client_secret", "audience", "user_agent")
                    if not getattr(self, name)]
         if missing:
-            raise ConfigError(f"AvivCredentials missing: {', '.join(missing)}")
+            raise ConfigError(
+                f"AVIV credentials are not configured: missing {', '.join(missing)}. "
+                "Set the corresponding AVIV_* environment variables (see "
+                "seloger/.env.example) on the host."
+            )
 
 
 class TokenCache:

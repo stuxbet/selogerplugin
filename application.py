@@ -18,19 +18,27 @@ import tempfile
 from pathlib import Path
 
 
-def _materialize_tenants_json() -> None:
-    """If ``TENANTS_JSON`` is set, write it to a tmpfile and point the loader at it.
+EMPTY_TENANTS = '{"tenants": {}}'
 
-    Lets Azure App Settings carry the JSON blob without ever touching the
-    filesystem from git. ``TENANTS_PATH`` is respected if explicitly set —
-    that wins.
+
+def _materialize_tenants_json() -> None:
+    """Make sure a ``tenants.json`` exists somewhere the loader can find it.
+
+    Resolution order:
+
+    * ``TENANTS_PATH`` set → use it as-is (caller is responsible for the file).
+    * ``TENANTS_JSON`` set → write the JSON blob to a tmpfile and point
+      ``TENANTS_PATH`` at it. This is how Azure App Settings deliver the
+      tenant directory without a file mount.
+    * Neither set → write an *empty* tenants file (``{"tenants": {}}``) so
+      the Flask app still boots and ``/health`` works as a smoke check.
+      The operator then provisions real tenants by setting ``TENANTS_JSON``
+      and restarting.
     """
 
     if os.environ.get("TENANTS_PATH"):
         return
-    raw = os.environ.get("TENANTS_JSON")
-    if not raw:
-        return
+    raw = os.environ.get("TENANTS_JSON", EMPTY_TENANTS)
     try:
         json.loads(raw)
     except json.JSONDecodeError as exc:
