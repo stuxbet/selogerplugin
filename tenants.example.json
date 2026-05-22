@@ -1,0 +1,17 @@
+{
+  "tenants": {
+    "tk_your-tenant-key-here": {
+      "name": "Example Agency",
+      "odoo": {
+        "base_url": "https://your-odoo.odoo.com",
+        "api_key": "your-odoo-api-key",
+        "database": "your-odoo-database"
+      },
+      "aviv": {
+        "intermediary_id": "issued-by-aviv-per-agency",
+        "offerer_id": "issued-by-aviv-per-agency",
+        "portals": ["SL"]
+      }
+    }
+  }
+}

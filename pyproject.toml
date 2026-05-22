@@ -1,0 +1,19 @@
+[project]
+name = "seloger-connector"
+version = "0.1.0"
+description = "Odoo ↔ SeLoger connector via the AVIV Classified API v4"
+requires-python = ">=3.11"
+dependencies = [
+    "flask",
+    "requests",
+    "pydantic>=2",
+    "jinja2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-mock",
+    "responses",
+    "datamodel-code-generator",
+]
