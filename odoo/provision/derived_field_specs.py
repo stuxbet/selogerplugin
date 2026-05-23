@@ -26,7 +26,7 @@ DERIVED_BUILDING_PROPERTY_FIELDS: tuple[FieldSpec, ...] = (
     FieldSpec(
         name='x_sales_office_postalcode',
         ttype='char',
-        label=_t('Postalcode', 'Postalcode'),
+        label=_t('Sales Office Postalcode', 'Sales Office Postalcode'),
         help=_t('postalcode or zip of the property location. It can be empty when not applicable. Use an empty string for unknown value.', 'postalcode or zip of the property location. It can be empty when not applicable. Use an empty string for unknown value.'),
         size=32,
         # source: data.buildingProperty.program.salesOffice.postalcode
@@ -34,7 +34,7 @@ DERIVED_BUILDING_PROPERTY_FIELDS: tuple[FieldSpec, ...] = (
     FieldSpec(
         name='x_sales_office_city',
         ttype='char',
-        label=_t('City', 'City'),
+        label=_t('Sales Office City', 'Sales Office City'),
         help=_t('city where the property is located. It can be empty when not applicable. Use an empty string for unknown value.', 'city where the property is located. It can be empty when not applicable. Use an empty string for unknown value.'),
         size=128,
         # source: data.buildingProperty.program.salesOffice.city
@@ -42,14 +42,14 @@ DERIVED_BUILDING_PROPERTY_FIELDS: tuple[FieldSpec, ...] = (
     FieldSpec(
         name='x_sales_office_street',
         ttype='text',
-        label=_t('Street', 'Street'),
+        label=_t('Sales Office Street', 'Sales Office Street'),
         help=_t('street where the property is located. It can also be a place name or any required neighbourhood information. It can be empty when not applicable. Use an empty string for unknown value.', 'street where the property is located. It can also be a place name or any required neighbourhood information. It can be empty when not applicable. Use an empty string for unknown value.'),
         # source: data.buildingProperty.program.salesOffice.street
     ),
     FieldSpec(
         name='x_sales_office_house_number',
         ttype='char',
-        label=_t('House Number', 'House Number'),
+        label=_t('Sales Office House Number', 'Sales Office House Number'),
         help=_t('house number where the property is located. It can be empty when not applicable. Use an empty string for unknown value.', 'house number where the property is located. It can be empty when not applicable. Use an empty string for unknown value.'),
         size=64,
         # source: data.buildingProperty.program.salesOffice.houseNumber
@@ -57,7 +57,7 @@ DERIVED_BUILDING_PROPERTY_FIELDS: tuple[FieldSpec, ...] = (
     FieldSpec(
         name='x_sales_office_country',
         ttype='char',
-        label=_t('Country', 'Country'),
+        label=_t('Sales Office Country', 'Sales Office Country'),
         help=_t('country where the property is located. **Note:** You are strongly encouraged to use ISO3166 country codes instead of country names. You can use the three-letter code (alpha-3) which is more closely related to the country name. ISO3166 country codes will be mandatory in the next major version.', 'country where the property is located. **Note:** You are strongly encouraged to use ISO3166 country codes instead of country names. You can use the three-letter code (alpha-3) which is more closely related to the country name. ISO3166 country codes will be mandatory in the next major version.'),
         size=125,
         # source: data.buildingProperty.program.salesOffice.country
@@ -65,7 +65,7 @@ DERIVED_BUILDING_PROPERTY_FIELDS: tuple[FieldSpec, ...] = (
     FieldSpec(
         name='x_promoter_name',
         ttype='char',
-        label=_t('Name', 'Name'),
+        label=_t('Promoter Name', 'Promoter Name'),
         help=_t('name of the promoter. It can be empty when not applicable.', 'name of the promoter. It can be empty when not applicable.'),
         size=64,
         # source: data.buildingProperty.program.coPromotion.promoter.name
@@ -73,7 +73,7 @@ DERIVED_BUILDING_PROPERTY_FIELDS: tuple[FieldSpec, ...] = (
     FieldSpec(
         name='x_promoter_address_street',
         ttype='char',
-        label=_t('Street', 'Street'),
+        label=_t('Promoter Address Street', 'Promoter Address Street'),
         help=_t('street of the promoter. It can be empty when not applicable.', 'street of the promoter. It can be empty when not applicable.'),
         size=64,
         # source: data.buildingProperty.program.coPromotion.promoter.address.street
@@ -81,7 +81,7 @@ DERIVED_BUILDING_PROPERTY_FIELDS: tuple[FieldSpec, ...] = (
     FieldSpec(
         name='x_promoter_address_house_number',
         ttype='char',
-        label=_t('House Number', 'House Number'),
+        label=_t('Promoter Address House Number', 'Promoter Address House Number'),
         help=_t('house number of the promoter. It can be empty when not applicable.', 'house number of the promoter. It can be empty when not applicable.'),
         size=4,
         # source: data.buildingProperty.program.coPromotion.promoter.address.houseNumber
@@ -89,7 +89,7 @@ DERIVED_BUILDING_PROPERTY_FIELDS: tuple[FieldSpec, ...] = (
     FieldSpec(
         name='x_promoter_address_postalcode',
         ttype='char',
-        label=_t('Postalcode', 'Postalcode'),
+        label=_t('Promoter Address Postalcode', 'Promoter Address Postalcode'),
         help=_t('postalcode or zip of the promoter. It can be empty when not applicable.', 'postalcode or zip of the promoter. It can be empty when not applicable.'),
         size=8,
         # source: data.buildingProperty.program.coPromotion.promoter.address.postalcode
@@ -97,7 +97,7 @@ DERIVED_BUILDING_PROPERTY_FIELDS: tuple[FieldSpec, ...] = (
     FieldSpec(
         name='x_promoter_address_city',
         ttype='char',
-        label=_t('City', 'City'),
+        label=_t('Promoter Address City', 'Promoter Address City'),
         help=_t('city of the promoter. It can be empty when not applicable.', 'city of the promoter. It can be empty when not applicable.'),
         size=32,
         # source: data.buildingProperty.program.coPromotion.promoter.address.city
@@ -105,7 +105,7 @@ DERIVED_BUILDING_PROPERTY_FIELDS: tuple[FieldSpec, ...] = (
     FieldSpec(
         name='x_promoter_address_country',
         ttype='char',
-        label=_t('Country', 'Country'),
+        label=_t('Promoter Address Country', 'Promoter Address Country'),
         help=_t('country where the promoter is located. **Note:** You are strongly encouraged to use ISO3166 country codes instead of country names. You can use the three-letter code (alpha-3) which is more closely related to the country name. ISO3166 country codes will be mandatory in the next major version.', 'country where the promoter is located. **Note:** You are strongly encouraged to use ISO3166 country codes instead of country names. You can use the three-letter code (alpha-3) which is more closely related to the country name. ISO3166 country codes will be mandatory in the next major version.'),
         size=16,
         # source: data.buildingProperty.program.coPromotion.promoter.address.country
@@ -113,7 +113,7 @@ DERIVED_BUILDING_PROPERTY_FIELDS: tuple[FieldSpec, ...] = (
     FieldSpec(
         name='x_promoter_url_logo',
         ttype='char',
-        label=_t('Url Logo', 'Url Logo'),
+        label=_t('Promoter Url Logo', 'Promoter Url Logo'),
         help=_t('URL to the logo of the promoter. It can be empty when not applicable.', 'URL to the logo of the promoter. It can be empty when not applicable.'),
         size=128,
         # source: data.buildingProperty.program.coPromotion.promoter.urlLogo
@@ -121,7 +121,7 @@ DERIVED_BUILDING_PROPERTY_FIELDS: tuple[FieldSpec, ...] = (
     FieldSpec(
         name='x_co_promoter_name',
         ttype='char',
-        label=_t('Name', 'Name'),
+        label=_t('Co Promoter Name', 'Co Promoter Name'),
         help=_t('name of the co-promoter. It can be empty when not applicable.', 'name of the co-promoter. It can be empty when not applicable.'),
         size=64,
         # source: data.buildingProperty.program.coPromotion.coPromoter.name
@@ -129,7 +129,7 @@ DERIVED_BUILDING_PROPERTY_FIELDS: tuple[FieldSpec, ...] = (
     FieldSpec(
         name='x_co_promoter_address_street',
         ttype='char',
-        label=_t('Street', 'Street'),
+        label=_t('Co Promoter Address Street', 'Co Promoter Address Street'),
         help=_t('street of the co-promoter. It can be empty when not applicable.', 'street of the co-promoter. It can be empty when not applicable.'),
         size=64,
         # source: data.buildingProperty.program.coPromotion.coPromoter.address.street
@@ -137,7 +137,7 @@ DERIVED_BUILDING_PROPERTY_FIELDS: tuple[FieldSpec, ...] = (
     FieldSpec(
         name='x_co_promoter_address_house_number',
         ttype='char',
-        label=_t('House Number', 'House Number'),
+        label=_t('Co Promoter Address House Number', 'Co Promoter Address House Number'),
         help=_t('house number of the co-promoter. It can be empty when not applicable.', 'house number of the co-promoter. It can be empty when not applicable.'),
         size=4,
         # source: data.buildingProperty.program.coPromotion.coPromoter.address.houseNumber
@@ -145,7 +145,7 @@ DERIVED_BUILDING_PROPERTY_FIELDS: tuple[FieldSpec, ...] = (
     FieldSpec(
         name='x_co_promoter_address_postalcode',
         ttype='char',
-        label=_t('Postalcode', 'Postalcode'),
+        label=_t('Co Promoter Address Postalcode', 'Co Promoter Address Postalcode'),
         help=_t('postalcode or zip of the co-promoter. It can be empty when not applicable.', 'postalcode or zip of the co-promoter. It can be empty when not applicable.'),
         size=8,
         # source: data.buildingProperty.program.coPromotion.coPromoter.address.postalcode
@@ -153,7 +153,7 @@ DERIVED_BUILDING_PROPERTY_FIELDS: tuple[FieldSpec, ...] = (
     FieldSpec(
         name='x_co_promoter_address_city',
         ttype='char',
-        label=_t('City', 'City'),
+        label=_t('Co Promoter Address City', 'Co Promoter Address City'),
         help=_t('city of the co-promoter. It can be empty when not applicable.', 'city of the co-promoter. It can be empty when not applicable.'),
         size=32,
         # source: data.buildingProperty.program.coPromotion.coPromoter.address.city
@@ -161,7 +161,7 @@ DERIVED_BUILDING_PROPERTY_FIELDS: tuple[FieldSpec, ...] = (
     FieldSpec(
         name='x_co_promoter_address_country',
         ttype='char',
-        label=_t('Country', 'Country'),
+        label=_t('Co Promoter Address Country', 'Co Promoter Address Country'),
         help=_t('country where the co-promoter is located. **Note:** You are strongly encouraged to use ISO3166 country codes instead of country names. You can use the three-letter code (alpha-3) which is more closely related to the country name. ISO3166 country codes will be mandatory in the next major version.', 'country where the co-promoter is located. **Note:** You are strongly encouraged to use ISO3166 country codes instead of country names. You can use the three-letter code (alpha-3) which is more closely related to the country name. ISO3166 country codes will be mandatory in the next major version.'),
         size=16,
         # source: data.buildingProperty.program.coPromotion.coPromoter.address.country
@@ -169,7 +169,7 @@ DERIVED_BUILDING_PROPERTY_FIELDS: tuple[FieldSpec, ...] = (
     FieldSpec(
         name='x_co_promoter_url_logo',
         ttype='char',
-        label=_t('Url Logo', 'Url Logo'),
+        label=_t('Co Promoter Url Logo', 'Co Promoter Url Logo'),
         help=_t('URL to the logo of the co-promoter. It can be empty when not applicable.', 'URL to the logo of the co-promoter. It can be empty when not applicable.'),
         size=128,
         # source: data.buildingProperty.program.coPromotion.coPromoter.urlLogo
@@ -243,7 +243,7 @@ DERIVED_CONDITIONS_FIELDS: tuple[FieldSpec, ...] = (
     ),
 )
 
-# ---- contact (18 fields) ----
+# ---- contact (20 fields) ----
 DERIVED_CONTACT_FIELDS: tuple[FieldSpec, ...] = (
     FieldSpec(
         name='x_user_homepage',
@@ -279,95 +279,107 @@ DERIVED_CONTACT_FIELDS: tuple[FieldSpec, ...] = (
         # source: data.contact.preferredContactType
     ),
     FieldSpec(
+        name='x_contact_note_en',
+        ttype='text',
+        label=_t('Contact Note En', 'Contact Note En'),
+        # source: data.contact.contactNote.en
+    ),
+    FieldSpec(
+        name='x_contact_note_fr',
+        ttype='text',
+        label=_t('Contact Note Fr', 'Contact Note Fr'),
+        # source: data.contact.contactNote.fr
+    ),
+    FieldSpec(
         name='x_main_contact_person_name',
         ttype='boolean',
-        label=_t('Name', 'Name'),
+        label=_t('Main Contact Person Name', 'Main Contact Person Name'),
         # source: data.contact.displayedInformation.mainContactPerson.name
     ),
     FieldSpec(
         name='x_main_contact_person_phone',
         ttype='boolean',
-        label=_t('Phone', 'Phone'),
+        label=_t('Main Contact Person Phone', 'Main Contact Person Phone'),
         # source: data.contact.displayedInformation.mainContactPerson.phone
     ),
     FieldSpec(
         name='x_main_contact_person_mobile_phone',
         ttype='boolean',
-        label=_t('Mobile Phone', 'Mobile Phone'),
+        label=_t('Main Contact Person Mobile Phone', 'Main Contact Person Mobile Phone'),
         # source: data.contact.displayedInformation.mainContactPerson.mobilePhone
     ),
     FieldSpec(
         name='x_main_contact_person_email',
         ttype='boolean',
-        label=_t('Email', 'Email'),
+        label=_t('Main Contact Person Email', 'Main Contact Person Email'),
         # source: data.contact.displayedInformation.mainContactPerson.email
     ),
     FieldSpec(
         name='x_main_contact_person_address',
         ttype='boolean',
-        label=_t('Address', 'Address'),
+        label=_t('Main Contact Person Address', 'Main Contact Person Address'),
         # source: data.contact.displayedInformation.mainContactPerson.address
     ),
     FieldSpec(
         name='x_main_contact_person_company_name',
         ttype='boolean',
-        label=_t('Company Name', 'Company Name'),
+        label=_t('Main Contact Person Company Name', 'Main Contact Person Company Name'),
         # source: data.contact.displayedInformation.mainContactPerson.companyName
     ),
     FieldSpec(
         name='x_main_contact_person_fax',
         ttype='boolean',
-        label=_t('Fax', 'Fax'),
+        label=_t('Main Contact Person Fax', 'Main Contact Person Fax'),
         # source: data.contact.displayedInformation.mainContactPerson.fax
     ),
     FieldSpec(
         name='x_additional_contact_person_name',
         ttype='boolean',
-        label=_t('Name', 'Name'),
+        label=_t('Additional Contact Person Name', 'Additional Contact Person Name'),
         # source: data.contact.displayedInformation.additionalContactPerson.name
     ),
     FieldSpec(
         name='x_additional_contact_person_phone',
         ttype='boolean',
-        label=_t('Phone', 'Phone'),
+        label=_t('Additional Contact Person Phone', 'Additional Contact Person Phone'),
         # source: data.contact.displayedInformation.additionalContactPerson.phone
     ),
     FieldSpec(
         name='x_additional_contact_person_mobile_phone',
         ttype='boolean',
-        label=_t('Mobile Phone', 'Mobile Phone'),
+        label=_t('Additional Contact Person Mobile Phone', 'Additional Contact Person Mobile Phone'),
         # source: data.contact.displayedInformation.additionalContactPerson.mobilePhone
     ),
     FieldSpec(
         name='x_additional_contact_person_email',
         ttype='boolean',
-        label=_t('Email', 'Email'),
+        label=_t('Additional Contact Person Email', 'Additional Contact Person Email'),
         # source: data.contact.displayedInformation.additionalContactPerson.email
     ),
     FieldSpec(
         name='x_additional_contact_person_address',
         ttype='boolean',
-        label=_t('Address', 'Address'),
+        label=_t('Additional Contact Person Address', 'Additional Contact Person Address'),
         # source: data.contact.displayedInformation.additionalContactPerson.address
     ),
     FieldSpec(
         name='x_additional_contact_person_company_name',
         ttype='boolean',
-        label=_t('Company Name', 'Company Name'),
+        label=_t('Additional Contact Person Company Name', 'Additional Contact Person Company Name'),
         # source: data.contact.displayedInformation.additionalContactPerson.companyName
     ),
     FieldSpec(
         name='x_additional_contact_person_fax',
         ttype='boolean',
-        label=_t('Fax', 'Fax'),
+        label=_t('Additional Contact Person Fax', 'Additional Contact Person Fax'),
         # source: data.contact.displayedInformation.additionalContactPerson.fax
     ),
 )
 
-# ---- country_specific (27 fields) ----
+# ---- country_specific (28 fields) ----
 DERIVED_COUNTRY_SPECIFIC_FIELDS: tuple[FieldSpec, ...] = (
     FieldSpec(
-        name='x_business_is_business_sold',
+        name='x_is_business_sold',
         ttype='boolean',
         label=_t('Is Business Sold', 'Is Business Sold'),
         help=_t('Is the business run inside the property sold ?', 'Is the business run inside the property sold ?'),
@@ -526,7 +538,7 @@ DERIVED_COUNTRY_SPECIFIC_FIELDS: tuple[FieldSpec, ...] = (
         # source: data.countrySpecific.fr.business.isPartOfNetwork
     ),
     FieldSpec(
-        name='x_business_down_payment',
+        name='x_down_payment',
         ttype='float',
         label=_t('Down Payment', 'Down Payment'),
         help=_t('down payment for the purchase of the business in euros.', 'down payment for the purchase of the business in euros.'),
@@ -545,6 +557,195 @@ DERIVED_COUNTRY_SPECIFIC_FIELDS: tuple[FieldSpec, ...] = (
         label=_t('Is Divisible', 'Is Divisible'),
         help=_t('parts of the business can be sold or rent. parts can be listed or not.', 'parts of the business can be sold or rent. parts can be listed or not.'),
         # source: data.countrySpecific.fr.business.isDivisible
+    ),
+    FieldSpec(
+        name='x_currency',
+        ttype='selection',
+        label=_t('Currency', 'Currency'),
+        help=_t('the currency must be entered as ISO 4217 currency code. Please refer to https://www.iso.org/iso-4217-currency-codes.html Last checked: October 1st, 2021 Here are the alphabetic three-letter country codes: - AED: UAE Dirham - AFN: Afghani - ALL: Lek - AMD: Armenian Dram - ANG: Netherlands Antillean Guilder - AOA: Kwanza - ARS: Argentine Peso - AUD: Australian Dollar - AWG: Aruban Florin - AZN: Azerbaijan Manat - BAM: Convertible Mark - BBD: Barbados Dollar - BDT: Taka - BGN: Bulgarian Lev - BHD: Bahraini Dinar - BIF: Burundi Franc - BMD: Bermudian Dollar - BND: Brunei Dollar - BOB: Boliviano -…', 'the currency must be entered as ISO 4217 currency code. Please refer to https://www.iso.org/iso-4217-currency-codes.html Last checked: October 1st, 2021 Here are the alphabetic three-letter country codes: - AED: UAE Dirham - AFN: Afghani - ALL: Lek - AMD: Armenian Dram - ANG: Netherlands Antillean Guilder - AOA: Kwanza - ARS: Argentine Peso - AUD: Australian Dollar - AWG: Aruban Florin - AZN: Azerbaijan Manat - BAM: Convertible Mark - BBD: Barbados Dollar - BDT: Taka - BGN: Bulgarian Lev - BHD: Bahraini Dinar - BIF: Burundi Franc - BMD: Bermudian Dollar - BND: Brunei Dollar - BOB: Boliviano -…'),
+        selection=(
+        SelectionOption('AED', _t('Aed', 'Aed'), 0),
+        SelectionOption('AFN', _t('Afn', 'Afn'), 1),
+        SelectionOption('ALL', _t('All', 'All'), 2),
+        SelectionOption('AMD', _t('Amd', 'Amd'), 3),
+        SelectionOption('ANG', _t('Ang', 'Ang'), 4),
+        SelectionOption('AOA', _t('Aoa', 'Aoa'), 5),
+        SelectionOption('ARS', _t('Ars', 'Ars'), 6),
+        SelectionOption('AUD', _t('Aud', 'Aud'), 7),
+        SelectionOption('AWG', _t('Awg', 'Awg'), 8),
+        SelectionOption('AZN', _t('Azn', 'Azn'), 9),
+        SelectionOption('BAM', _t('Bam', 'Bam'), 10),
+        SelectionOption('BBD', _t('Bbd', 'Bbd'), 11),
+        SelectionOption('BDT', _t('Bdt', 'Bdt'), 12),
+        SelectionOption('BGN', _t('Bgn', 'Bgn'), 13),
+        SelectionOption('BHD', _t('Bhd', 'Bhd'), 14),
+        SelectionOption('BIF', _t('Bif', 'Bif'), 15),
+        SelectionOption('BMD', _t('Bmd', 'Bmd'), 16),
+        SelectionOption('BND', _t('Bnd', 'Bnd'), 17),
+        SelectionOption('BOB', _t('Bob', 'Bob'), 18),
+        SelectionOption('BOV', _t('Bov', 'Bov'), 19),
+        SelectionOption('BRL', _t('Brl', 'Brl'), 20),
+        SelectionOption('BSD', _t('Bsd', 'Bsd'), 21),
+        SelectionOption('BTN', _t('Btn', 'Btn'), 22),
+        SelectionOption('BWP', _t('Bwp', 'Bwp'), 23),
+        SelectionOption('BYN', _t('Byn', 'Byn'), 24),
+        SelectionOption('BZD', _t('Bzd', 'Bzd'), 25),
+        SelectionOption('CAD', _t('Cad', 'Cad'), 26),
+        SelectionOption('CDF', _t('Cdf', 'Cdf'), 27),
+        SelectionOption('CHE', _t('Che', 'Che'), 28),
+        SelectionOption('CHF', _t('Chf', 'Chf'), 29),
+        SelectionOption('CHW', _t('Chw', 'Chw'), 30),
+        SelectionOption('CLF', _t('Clf', 'Clf'), 31),
+        SelectionOption('CLP', _t('Clp', 'Clp'), 32),
+        SelectionOption('CNY', _t('Cny', 'Cny'), 33),
+        SelectionOption('COP', _t('Cop', 'Cop'), 34),
+        SelectionOption('COU', _t('Cou', 'Cou'), 35),
+        SelectionOption('CRC', _t('Crc', 'Crc'), 36),
+        SelectionOption('CUC', _t('Cuc', 'Cuc'), 37),
+        SelectionOption('CUP', _t('Cup', 'Cup'), 38),
+        SelectionOption('CVE', _t('Cve', 'Cve'), 39),
+        SelectionOption('CZK', _t('Czk', 'Czk'), 40),
+        SelectionOption('DJF', _t('Djf', 'Djf'), 41),
+        SelectionOption('DKK', _t('Dkk', 'Dkk'), 42),
+        SelectionOption('DOP', _t('Dop', 'Dop'), 43),
+        SelectionOption('DZD', _t('Dzd', 'Dzd'), 44),
+        SelectionOption('EGP', _t('Egp', 'Egp'), 45),
+        SelectionOption('ERN', _t('Ern', 'Ern'), 46),
+        SelectionOption('ETB', _t('Etb', 'Etb'), 47),
+        SelectionOption('EUR', _t('Eur', 'Eur'), 48),
+        SelectionOption('FJD', _t('Fjd', 'Fjd'), 49),
+        SelectionOption('FKP', _t('Fkp', 'Fkp'), 50),
+        SelectionOption('GBP', _t('Gbp', 'Gbp'), 51),
+        SelectionOption('GEL', _t('Gel', 'Gel'), 52),
+        SelectionOption('GHS', _t('Ghs', 'Ghs'), 53),
+        SelectionOption('GIP', _t('Gip', 'Gip'), 54),
+        SelectionOption('GMD', _t('Gmd', 'Gmd'), 55),
+        SelectionOption('GNF', _t('Gnf', 'Gnf'), 56),
+        SelectionOption('GTQ', _t('Gtq', 'Gtq'), 57),
+        SelectionOption('GYD', _t('Gyd', 'Gyd'), 58),
+        SelectionOption('HKD', _t('Hkd', 'Hkd'), 59),
+        SelectionOption('HNL', _t('Hnl', 'Hnl'), 60),
+        SelectionOption('HRK', _t('Hrk', 'Hrk'), 61),
+        SelectionOption('HTG', _t('Htg', 'Htg'), 62),
+        SelectionOption('HUF', _t('Huf', 'Huf'), 63),
+        SelectionOption('IDR', _t('Idr', 'Idr'), 64),
+        SelectionOption('ILS', _t('Ils', 'Ils'), 65),
+        SelectionOption('INR', _t('Inr', 'Inr'), 66),
+        SelectionOption('IQD', _t('Iqd', 'Iqd'), 67),
+        SelectionOption('IRR', _t('Irr', 'Irr'), 68),
+        SelectionOption('ISK', _t('Isk', 'Isk'), 69),
+        SelectionOption('JMD', _t('Jmd', 'Jmd'), 70),
+        SelectionOption('JOD', _t('Jod', 'Jod'), 71),
+        SelectionOption('JPY', _t('Jpy', 'Jpy'), 72),
+        SelectionOption('KES', _t('Kes', 'Kes'), 73),
+        SelectionOption('KGS', _t('Kgs', 'Kgs'), 74),
+        SelectionOption('KHR', _t('Khr', 'Khr'), 75),
+        SelectionOption('KMF', _t('Kmf', 'Kmf'), 76),
+        SelectionOption('KPW', _t('Kpw', 'Kpw'), 77),
+        SelectionOption('KRW', _t('Krw', 'Krw'), 78),
+        SelectionOption('KWD', _t('Kwd', 'Kwd'), 79),
+        SelectionOption('KYD', _t('Kyd', 'Kyd'), 80),
+        SelectionOption('KZT', _t('Kzt', 'Kzt'), 81),
+        SelectionOption('LAK', _t('Lak', 'Lak'), 82),
+        SelectionOption('LBP', _t('Lbp', 'Lbp'), 83),
+        SelectionOption('LKR', _t('Lkr', 'Lkr'), 84),
+        SelectionOption('LRD', _t('Lrd', 'Lrd'), 85),
+        SelectionOption('LSL', _t('Lsl', 'Lsl'), 86),
+        SelectionOption('LYD', _t('Lyd', 'Lyd'), 87),
+        SelectionOption('MAD', _t('Mad', 'Mad'), 88),
+        SelectionOption('MDL', _t('Mdl', 'Mdl'), 89),
+        SelectionOption('MGA', _t('Mga', 'Mga'), 90),
+        SelectionOption('MKD', _t('Mkd', 'Mkd'), 91),
+        SelectionOption('MMK', _t('Mmk', 'Mmk'), 92),
+        SelectionOption('MNT', _t('Mnt', 'Mnt'), 93),
+        SelectionOption('MOP', _t('Mop', 'Mop'), 94),
+        SelectionOption('MRU', _t('Mru', 'Mru'), 95),
+        SelectionOption('MUR', _t('Mur', 'Mur'), 96),
+        SelectionOption('MVR', _t('Mvr', 'Mvr'), 97),
+        SelectionOption('MWK', _t('Mwk', 'Mwk'), 98),
+        SelectionOption('MXN', _t('Mxn', 'Mxn'), 99),
+        SelectionOption('MXV', _t('Mxv', 'Mxv'), 100),
+        SelectionOption('MYR', _t('Myr', 'Myr'), 101),
+        SelectionOption('MZN', _t('Mzn', 'Mzn'), 102),
+        SelectionOption('NAD', _t('Nad', 'Nad'), 103),
+        SelectionOption('NGN', _t('Ngn', 'Ngn'), 104),
+        SelectionOption('NIO', _t('Nio', 'Nio'), 105),
+        SelectionOption('NOK', _t('Nok', 'Nok'), 106),
+        SelectionOption('NPR', _t('Npr', 'Npr'), 107),
+        SelectionOption('NZD', _t('Nzd', 'Nzd'), 108),
+        SelectionOption('OMR', _t('Omr', 'Omr'), 109),
+        SelectionOption('PAB', _t('Pab', 'Pab'), 110),
+        SelectionOption('PEN', _t('Pen', 'Pen'), 111),
+        SelectionOption('PGK', _t('Pgk', 'Pgk'), 112),
+        SelectionOption('PHP', _t('Php', 'Php'), 113),
+        SelectionOption('PKR', _t('Pkr', 'Pkr'), 114),
+        SelectionOption('PLN', _t('Pln', 'Pln'), 115),
+        SelectionOption('PYG', _t('Pyg', 'Pyg'), 116),
+        SelectionOption('QAR', _t('Qar', 'Qar'), 117),
+        SelectionOption('RON', _t('Ron', 'Ron'), 118),
+        SelectionOption('RSD', _t('Rsd', 'Rsd'), 119),
+        SelectionOption('RUB', _t('Rub', 'Rub'), 120),
+        SelectionOption('RWF', _t('Rwf', 'Rwf'), 121),
+        SelectionOption('SAR', _t('Sar', 'Sar'), 122),
+        SelectionOption('SBD', _t('Sbd', 'Sbd'), 123),
+        SelectionOption('SCR', _t('Scr', 'Scr'), 124),
+        SelectionOption('SDG', _t('Sdg', 'Sdg'), 125),
+        SelectionOption('SEK', _t('Sek', 'Sek'), 126),
+        SelectionOption('SGD', _t('Sgd', 'Sgd'), 127),
+        SelectionOption('SHP', _t('Shp', 'Shp'), 128),
+        SelectionOption('SLL', _t('Sll', 'Sll'), 129),
+        SelectionOption('SOS', _t('Sos', 'Sos'), 130),
+        SelectionOption('SRD', _t('Srd', 'Srd'), 131),
+        SelectionOption('SSP', _t('Ssp', 'Ssp'), 132),
+        SelectionOption('STN', _t('Stn', 'Stn'), 133),
+        SelectionOption('SVC', _t('Svc', 'Svc'), 134),
+        SelectionOption('SYP', _t('Syp', 'Syp'), 135),
+        SelectionOption('SZL', _t('Szl', 'Szl'), 136),
+        SelectionOption('THB', _t('Thb', 'Thb'), 137),
+        SelectionOption('TJS', _t('Tjs', 'Tjs'), 138),
+        SelectionOption('TMT', _t('Tmt', 'Tmt'), 139),
+        SelectionOption('TND', _t('Tnd', 'Tnd'), 140),
+        SelectionOption('TOP', _t('Top', 'Top'), 141),
+        SelectionOption('TRY', _t('Try', 'Try'), 142),
+        SelectionOption('TTD', _t('Ttd', 'Ttd'), 143),
+        SelectionOption('TWD', _t('Twd', 'Twd'), 144),
+        SelectionOption('TZS', _t('Tzs', 'Tzs'), 145),
+        SelectionOption('UAH', _t('Uah', 'Uah'), 146),
+        SelectionOption('UGX', _t('Ugx', 'Ugx'), 147),
+        SelectionOption('USD', _t('Usd', 'Usd'), 148),
+        SelectionOption('USN', _t('Usn', 'Usn'), 149),
+        SelectionOption('UYI', _t('Uyi', 'Uyi'), 150),
+        SelectionOption('UYU', _t('Uyu', 'Uyu'), 151),
+        SelectionOption('UYW', _t('Uyw', 'Uyw'), 152),
+        SelectionOption('UZS', _t('Uzs', 'Uzs'), 153),
+        SelectionOption('VED', _t('Ved', 'Ved'), 154),
+        SelectionOption('VES', _t('Ves', 'Ves'), 155),
+        SelectionOption('VND', _t('Vnd', 'Vnd'), 156),
+        SelectionOption('VUV', _t('Vuv', 'Vuv'), 157),
+        SelectionOption('WST', _t('Wst', 'Wst'), 158),
+        SelectionOption('XAF', _t('Xaf', 'Xaf'), 159),
+        SelectionOption('XAG', _t('Xag', 'Xag'), 160),
+        SelectionOption('XAU', _t('Xau', 'Xau'), 161),
+        SelectionOption('XBA', _t('Xba', 'Xba'), 162),
+        SelectionOption('XBB', _t('Xbb', 'Xbb'), 163),
+        SelectionOption('XBC', _t('Xbc', 'Xbc'), 164),
+        SelectionOption('XBD', _t('Xbd', 'Xbd'), 165),
+        SelectionOption('XCD', _t('Xcd', 'Xcd'), 166),
+        SelectionOption('XDR', _t('Xdr', 'Xdr'), 167),
+        SelectionOption('XOF', _t('Xof', 'Xof'), 168),
+        SelectionOption('XPD', _t('Xpd', 'Xpd'), 169),
+        SelectionOption('XPF', _t('Xpf', 'Xpf'), 170),
+        SelectionOption('XPT', _t('Xpt', 'Xpt'), 171),
+        SelectionOption('XSU', _t('Xsu', 'Xsu'), 172),
+        SelectionOption('XTS', _t('Xts', 'Xts'), 173),
+        SelectionOption('XUA', _t('Xua', 'Xua'), 174),
+        SelectionOption('XXX', _t('Xxx', 'Xxx'), 175),
+        SelectionOption('YER', _t('Yer', 'Yer'), 176),
+        SelectionOption('ZAR', _t('Zar', 'Zar'), 177),
+        SelectionOption('ZMW', _t('Zmw', 'Zmw'), 178),
+        SelectionOption('ZWL', _t('Zwl', 'Zwl'), 179),
+        ),
+        # source: data.countrySpecific.fr.subdivisions.currency
     ),
     FieldSpec(
         name='x_mandate_number',
@@ -567,14 +768,14 @@ DERIVED_COUNTRY_SPECIFIC_FIELDS: tuple[FieldSpec, ...] = (
     FieldSpec(
         name='x_agent_mandate_start_date',
         ttype='date',
-        label=_t('Start Date', 'Start Date'),
+        label=_t('Agent Mandate Start Date', 'Agent Mandate Start Date'),
         help=_t('estate agent mandate start date (ISO 8601 formatted)', 'estate agent mandate start date (ISO 8601 formatted)'),
         # source: data.countrySpecific.fr.agentMandate.startDate
     ),
     FieldSpec(
         name='x_agent_mandate_end_date',
         ttype='date',
-        label=_t('End Date', 'End Date'),
+        label=_t('Agent Mandate End Date', 'Agent Mandate End Date'),
         help=_t('estate agent mandate end ISO 8601 formatted date', 'estate agent mandate end ISO 8601 formatted date'),
         # source: data.countrySpecific.fr.agentMandate.endDate
     ),
@@ -616,14 +817,14 @@ DERIVED_COUNTRY_SPECIFIC_FIELDS: tuple[FieldSpec, ...] = (
     FieldSpec(
         name='x_special_offer_start_date',
         ttype='date',
-        label=_t('Start Date', 'Start Date'),
+        label=_t('Special Offer Start Date', 'Special Offer Start Date'),
         help=_t('start date of the special offer', 'start date of the special offer'),
         # source: data.countrySpecific.fr.commercial.specialOffer.startDate
     ),
     FieldSpec(
         name='x_special_offer_end_date',
         ttype='date',
-        label=_t('End Date', 'End Date'),
+        label=_t('Special Offer End Date', 'Special Offer End Date'),
         help=_t('end date of the special offer', 'end date of the special offer'),
         # source: data.countrySpecific.fr.commercial.specialOffer.endDate
     ),
@@ -660,7 +861,7 @@ DERIVED_DISTRIBUTION_TYPE_FIELDS: tuple[FieldSpec, ...] = (
     ),
 )
 
-# ---- energy (46 fields) ----
+# ---- energy (35 fields) ----
 DERIVED_ENERGY_FIELDS: tuple[FieldSpec, ...] = (
     FieldSpec(
         name='x_heat_method',
@@ -718,20 +919,20 @@ DERIVED_ENERGY_FIELDS: tuple[FieldSpec, ...] = (
     FieldSpec(
         name='x_energy_source_district_heating',
         ttype='boolean',
-        label=_t('District Heating', 'District Heating'),
+        label=_t('Energy Source District Heating', 'Energy Source District Heating'),
         help=_t('system for distributing heat generated in a centralized location', 'system for distributing heat generated in a centralized location'),
         # source: data.energy.energyType.energySource.districtHeating
     ),
     FieldSpec(
         name='x_energy_source_electric',
         ttype='boolean',
-        label=_t('Electric', 'Electric'),
+        label=_t('Energy Source Electric', 'Energy Source Electric'),
         # source: data.energy.energyType.energySource.electric
     ),
     FieldSpec(
         name='x_energy_source_gas',
         ttype='boolean',
-        label=_t('Gas', 'Gas'),
+        label=_t('Energy Source Gas', 'Energy Source Gas'),
         # source: data.energy.energyType.energySource.gas
     ),
     FieldSpec(
@@ -829,7 +1030,7 @@ DERIVED_ENERGY_FIELDS: tuple[FieldSpec, ...] = (
         # source: data.energy.countrySpecific.fr.energyCertificate.overallEnergyNeed
     ),
     FieldSpec(
-        name='x_fr_energy_certificate_efficiency_class',
+        name='x_efficiency_class',
         ttype='selection',
         label=_t('Efficiency Class', 'Efficiency Class'),
         help=_t('Energy Letter according to the French Regulations', 'Energy Letter according to the French Regulations'),
@@ -845,7 +1046,7 @@ DERIVED_ENERGY_FIELDS: tuple[FieldSpec, ...] = (
         # source: data.energy.countrySpecific.fr.energyCertificate.efficiencyClass
     ),
     FieldSpec(
-        name='x_fr_energy_certificate_g_h_g_emission',
+        name='x_g_h_g_emission',
         ttype='float',
         label=_t('G H G Emission', 'G H G Emission'),
         help=_t('GreenHouse Gas emissions in KgCO2/m²/year', 'GreenHouse Gas emissions in KgCO2/m²/year'),
@@ -868,7 +1069,7 @@ DERIVED_ENERGY_FIELDS: tuple[FieldSpec, ...] = (
         # source: data.energy.countrySpecific.fr.energyCertificate.GHGEmissionClass
     ),
     FieldSpec(
-        name='x_fr_energy_certificate_release_date',
+        name='x_release_date',
         ttype='date',
         label=_t('Release Date', 'Release Date'),
         help=_t('release date of the certificate. The date is an ISO 8601 formatted string', 'release date of the certificate. The date is an ISO 8601 formatted string'),
@@ -937,136 +1138,6 @@ DERIVED_ENERGY_FIELDS: tuple[FieldSpec, ...] = (
         SelectionOption('THQE', _t('Thqe', 'Thqe'), 7),
         ),
         # source: data.energy.countrySpecific.fr.houseEnergyStandardType
-    ),
-    FieldSpec(
-        name='x_oil_tank_certificate_status',
-        ttype='selection',
-        label=_t('Oil Tank Certificate Status', 'Oil Tank Certificate Status'),
-        help=_t('Conformity certification for fuel tanks. Not available for homes to build. Oil tanks certificates are legally mandatory.', 'Conformity certification for fuel tanks. Not available for homes to build. Oil tanks certificates are legally mandatory.'),
-        selection=(
-        SelectionOption('YES_CONFORM', _t('Yes Conform', 'Yes Conform'), 0),
-        SelectionOption('YES_NOT_CONFORM', _t('Yes Not Conform', 'Yes Not Conform'), 1),
-        SelectionOption('NO', _t('No', 'No'), 2),
-        SelectionOption('NOT_SPECIFIED', _t('Not Specified', 'Not Specified'), 3),
-        ),
-        # source: data.energy.countrySpecific.be.oilTankCertificateStatus
-    ),
-    FieldSpec(
-        name='x_has_electrical_installation_compliance_certificate',
-        ttype='boolean',
-        label=_t('Has Electrical Installation Compliance Certificate', 'Has Electrical Installation Compliance Certificate'),
-        help=_t('User confirmation on consent for electrical installation compliance certificate', 'User confirmation on consent for electrical installation compliance certificate'),
-        # source: data.energy.countrySpecific.be.hasElectricalInstallationComplianceCertificate
-    ),
-    FieldSpec(
-        name='x_primary_energy_consumption_level',
-        ttype='integer',
-        label=_t('Primary Energy Consumption Level', 'Primary Energy Consumption Level'),
-        help=_t("Also called E-level, reflects the home's energy consumption. It takes into account the heating, the production of hot water, the cooling, the ventilation and the energy consumption of the accessories. Unit is kWh.", "Also called E-level, reflects the home's energy consumption. It takes into account the heating, the production of hot water, the cooling, the ventilation and the energy consumption of the accessories. Unit is kWh."),
-        # source: data.energy.countrySpecific.be.primaryEnergyConsumptionLevel
-    ),
-    FieldSpec(
-        name='x_global_thermal_insulation_level',
-        ttype='integer',
-        label=_t('Global Thermal Insulation Level', 'Global Thermal Insulation Level'),
-        help=_t('Also called K-level, reflects the degree of thermal insulation of a home. It takes account of heat loss through exterior walls, roofs, floors and windows.', 'Also called K-level, reflects the degree of thermal insulation of a home. It takes account of heat loss through exterior walls, roofs, floors and windows.'),
-        # source: data.energy.countrySpecific.be.globalThermalInsulationLevel
-    ),
-    FieldSpec(
-        name='x_certificate_number',
-        ttype='char',
-        label=_t('Certificate Number', 'Certificate Number'),
-        help=_t('Indicates the reference number of EPC report. The EPC score and the address or the unique code of the certificate has to be published on each classified. All certificates are registered in the central database managed by the Belgian Public Service.', 'Indicates the reference number of EPC report. The EPC score and the address or the unique code of the certificate has to be published on each classified. All certificates are registered in the central database managed by the Belgian Public Service.'),
-        size=100,
-        # source: data.energy.countrySpecific.be.energyCertificate.certificateNumber
-    ),
-    FieldSpec(
-        name='x_primary_energy_consumption',
-        ttype='integer',
-        label=_t('Primary Energy Consumption', 'Primary Energy Consumption'),
-        help=_t('The primary energy consumption in kWh per m² per year. This is the overall theoretical consumption divided by the heated floor area. It is this value that is characterized by a label.', 'The primary energy consumption in kWh per m² per year. This is the overall theoretical consumption divided by the heated floor area. It is this value that is characterized by a label.'),
-        # source: data.energy.countrySpecific.be.energyCertificate.primaryEnergyConsumption
-    ),
-    FieldSpec(
-        name='x_be_energy_certificate_efficiency_class',
-        ttype='selection',
-        label=_t('Efficiency Class', 'Efficiency Class'),
-        help=_t('Indicates the Energy Letter according to the Belgium Regulations ("Performance énergétique")', 'Indicates the Energy Letter according to the Belgium Regulations ("Performance énergétique")'),
-        selection=(
-        SelectionOption('A++', _t('A++', 'A++'), 0),
-        SelectionOption('A+', _t('A+', 'A+'), 1),
-        SelectionOption('A', _t('A', 'A'), 2),
-        SelectionOption('B', _t('B', 'B'), 3),
-        SelectionOption('C', _t('C', 'C'), 4),
-        SelectionOption('D', _t('D', 'D'), 5),
-        SelectionOption('E', _t('E', 'E'), 6),
-        SelectionOption('F', _t('F', 'F'), 7),
-        SelectionOption('G', _t('G', 'G'), 8),
-        SelectionOption('A+_A++', _t('A+ A++', 'A+ A++'), 9),
-        SelectionOption('A_A++', _t('A A++', 'A A++'), 10),
-        SelectionOption('A_A+', _t('A A+', 'A A+'), 11),
-        SelectionOption('B_A++', _t('B A++', 'B A++'), 12),
-        SelectionOption('B_A+', _t('B A+', 'B A+'), 13),
-        SelectionOption('B_A', _t('B A', 'B A'), 14),
-        SelectionOption('C_A++', _t('C A++', 'C A++'), 15),
-        SelectionOption('C_A+', _t('C A+', 'C A+'), 16),
-        SelectionOption('C_A', _t('C A', 'C A'), 17),
-        SelectionOption('C_B', _t('C B', 'C B'), 18),
-        SelectionOption('D_A++', _t('D A++', 'D A++'), 19),
-        SelectionOption('D_A+', _t('D A+', 'D A+'), 20),
-        SelectionOption('D_A', _t('D A', 'D A'), 21),
-        SelectionOption('D_B', _t('D B', 'D B'), 22),
-        SelectionOption('D_C', _t('D C', 'D C'), 23),
-        SelectionOption('E_A++', _t('E A++', 'E A++'), 24),
-        SelectionOption('E_A+', _t('E A+', 'E A+'), 25),
-        SelectionOption('E_A', _t('E A', 'E A'), 26),
-        SelectionOption('E_B', _t('E B', 'E B'), 27),
-        SelectionOption('E_C', _t('E C', 'E C'), 28),
-        SelectionOption('E_D', _t('E D', 'E D'), 29),
-        SelectionOption('F_A++', _t('F A++', 'F A++'), 30),
-        SelectionOption('F_A+', _t('F A+', 'F A+'), 31),
-        SelectionOption('F_A', _t('F A', 'F A'), 32),
-        SelectionOption('F_B', _t('F B', 'F B'), 33),
-        SelectionOption('F_C', _t('F C', 'F C'), 34),
-        SelectionOption('F_D', _t('F D', 'F D'), 35),
-        SelectionOption('F_E', _t('F E', 'F E'), 36),
-        SelectionOption('G_A++', _t('G A++', 'G A++'), 37),
-        SelectionOption('G_A+', _t('G A+', 'G A+'), 38),
-        SelectionOption('G_A', _t('G A', 'G A'), 39),
-        SelectionOption('G_B', _t('G B', 'G B'), 40),
-        SelectionOption('G_C', _t('G C', 'G C'), 41),
-        SelectionOption('G_D', _t('G D', 'G D'), 42),
-        SelectionOption('G_E', _t('G E', 'G E'), 43),
-        ),
-        # source: data.energy.countrySpecific.be.energyCertificate.efficiencyClass
-    ),
-    FieldSpec(
-        name='x_be_energy_certificate_g_h_g_emission',
-        ttype='float',
-        label=_t('G H G Emission', 'G H G Emission'),
-        help=_t('GreenHouse Gas emissions in Kg CO2eq/m²/year Carbon dioxide equivalent (CO2e or CO2eq or CO2-e) is calculated from global warming potential.', 'GreenHouse Gas emissions in Kg CO2eq/m²/year Carbon dioxide equivalent (CO2e or CO2eq or CO2-e) is calculated from global warming potential.'),
-        # source: data.energy.countrySpecific.be.energyCertificate.GHGEmission
-    ),
-    FieldSpec(
-        name='x_be_energy_certificate_release_date',
-        ttype='date',
-        label=_t('Release Date', 'Release Date'),
-        help=_t('release date of the certificate. The date is an ISO 8601 formatted string', 'release date of the certificate. The date is an ISO 8601 formatted string'),
-        # source: data.energy.countrySpecific.be.energyCertificate.releaseDate
-    ),
-    FieldSpec(
-        name='x_valid_until',
-        ttype='date',
-        label=_t('Valid Until', 'Valid Until'),
-        help=_t('certificate valid until date. The date is an ISO 8601 formatted string', 'certificate valid until date. The date is an ISO 8601 formatted string'),
-        # source: data.energy.countrySpecific.be.energyCertificate.validUntil
-    ),
-    FieldSpec(
-        name='x_theoretical_energy_consumption',
-        ttype='integer',
-        label=_t('Theoretical Energy Consumption', 'Theoretical Energy Consumption'),
-        help=_t('Indicates the total primary energy theoretical consumption of the dwelling, expressed in primary energy under standardised conditions. In kWh/year Legaly mandatory for Wallonia. For other regions the information will be displayed as \'non communicated\'."', 'Indicates the total primary energy theoretical consumption of the dwelling, expressed in primary energy under standardised conditions. In kWh/year Legaly mandatory for Wallonia. For other regions the information will be displayed as \'non communicated\'."'),
-        # source: data.energy.countrySpecific.be.energyCertificate.theoreticalEnergyConsumption
     ),
 )
 
@@ -1273,7 +1344,32 @@ DERIVED_ESTATE_SUB_TYPE_FIELDS: tuple[FieldSpec, ...] = (
     ),
 )
 
-# ---- features (114 fields) ----
+# ---- estate_type (1 fields) ----
+DERIVED_ESTATE_TYPE_FIELDS: tuple[FieldSpec, ...] = (
+    FieldSpec(
+        name='x_estate_type',
+        ttype='selection',
+        label=_t('Estate Type', 'Type de bien'),
+        help=_t('the general type of the property. To classify it in detail, please use the subtypes. descriptions for the enums above: - HOUSE: a building where people live in - APARTMENT: a set of rooms for living in within a building; a flat - PLOT: a piece of land - OFFICE: a room, set of rooms, or building where the business of a commercial or industrial organization or of a professional person is conducted. also medical offices are included here. - TRADING: all kind of properties concerning trading, retail and whole sale - GASTRONOMY_HOTEL: all kind of properties concerning the hotel and catering industr…', 'the general type of the property. To classify it in detail, please use the subtypes. descriptions for the enums above: - HOUSE: a building where people live in - APARTMENT: a set of rooms for living in within a building; a flat - PLOT: a piece of land - OFFICE: a room, set of rooms, or building where the business of a commercial or industrial organization or of a professional person is conducted. also medical offices are included here. - TRADING: all kind of properties concerning trading, retail and whole sale - GASTRONOMY_HOTEL: all kind of properties concerning the hotel and catering industr…'),
+        selection=(
+        SelectionOption('HOUSE', _t('House', 'House'), 0),
+        SelectionOption('APARTMENT', _t('Apartment', 'Apartment'), 1),
+        SelectionOption('PLOT', _t('Plot', 'Plot'), 2),
+        SelectionOption('OFFICE', _t('Office', 'Office'), 3),
+        SelectionOption('TRADING', _t('Trading', 'Trading'), 4),
+        SelectionOption('GASTRONOMY_HOTEL', _t('Gastronomy Hotel', 'Gastronomy Hotel'), 5),
+        SelectionOption('STORAGE_PRODUCTION', _t('Storage Production', 'Storage Production'), 6),
+        SelectionOption('AGRICULTURE_FORESTRY', _t('Agriculture Forestry', 'Agriculture Forestry'), 7),
+        SelectionOption('PARKING', _t('Parking', 'Parking'), 8),
+        SelectionOption('SENIOR', _t('Senior', 'Senior'), 9),
+        SelectionOption('PROJECT', _t('Project', 'Project'), 10),
+        SelectionOption('MISCELLANEOUS', _t('Miscellaneous', 'Miscellaneous'), 11),
+        ),
+        # source: data.estateType
+    ),
+)
+
+# ---- features (113 fields) ----
 DERIVED_FEATURES_FIELDS: tuple[FieldSpec, ...] = (
     FieldSpec(
         name='x_accessible_from_street',
@@ -1628,7 +1724,7 @@ DERIVED_FEATURES_FIELDS: tuple[FieldSpec, ...] = (
     FieldSpec(
         name='x_lighting_window',
         ttype='selection',
-        label=_t('Window', 'Window'),
+        label=_t('Lighting Window', 'Lighting Window'),
         help=_t('natural light through the presence of windows', 'natural light through the presence of windows'),
         selection=(
         SelectionOption('YES', _t('Yes', 'Yes'), 0),
@@ -1648,6 +1744,25 @@ DERIVED_FEATURES_FIELDS: tuple[FieldSpec, ...] = (
         SelectionOption('NOT_APPLICABLE', _t('Not Applicable', 'Not Applicable'), 2),
         ),
         # source: data.features.mezzanine
+    ),
+    FieldSpec(
+        name='x_property_orientation',
+        ttype='selection',
+        label=_t('Property Orientation', 'Property Orientation'),
+        help=_t('cardinal and ordinal geographical directions', 'cardinal and ordinal geographical directions'),
+        selection=(
+        SelectionOption('NORTH', _t('North', 'North'), 0),
+        SelectionOption('EAST', _t('East', 'East'), 1),
+        SelectionOption('SOUTH', _t('South', 'South'), 2),
+        SelectionOption('WEST', _t('West', 'West'), 3),
+        SelectionOption('NORTH_EAST', _t('North East', 'North East'), 4),
+        SelectionOption('SOUTH_EAST', _t('South East', 'South East'), 5),
+        SelectionOption('NORTH_WEST', _t('North West', 'North West'), 6),
+        SelectionOption('SOUTH_WEST', _t('South West', 'South West'), 7),
+        SelectionOption('EAST_WEST', _t('East West', 'East West'), 8),
+        SelectionOption('SOUTH_NORTH', _t('South North', 'South North'), 9),
+        ),
+        # source: data.features.propertyOrientation
     ),
     FieldSpec(
         name='x_receptionist',
@@ -2364,7 +2479,7 @@ DERIVED_FEATURES_FIELDS: tuple[FieldSpec, ...] = (
     FieldSpec(
         name='x_usage_for_garage',
         ttype='selection',
-        label=_t('Garage', 'Garage'),
+        label=_t('Usage For Garage', 'Usage For Garage'),
         selection=(
         SelectionOption('YES', _t('Yes', 'Yes'), 0),
         SelectionOption('NO', _t('No', 'No'), 1),
@@ -2386,7 +2501,7 @@ DERIVED_FEATURES_FIELDS: tuple[FieldSpec, ...] = (
     FieldSpec(
         name='x_development_infrastructure_district_heating',
         ttype='selection',
-        label=_t('District Heating', 'District Heating'),
+        label=_t('Development Infrastructure District Heating', 'Development Infrastructure District Heating'),
         selection=(
         SelectionOption('YES', _t('Yes', 'Yes'), 0),
         SelectionOption('NO', _t('No', 'No'), 1),
@@ -2397,7 +2512,7 @@ DERIVED_FEATURES_FIELDS: tuple[FieldSpec, ...] = (
     FieldSpec(
         name='x_development_infrastructure_electric',
         ttype='selection',
-        label=_t('Electric', 'Electric'),
+        label=_t('Development Infrastructure Electric', 'Development Infrastructure Electric'),
         selection=(
         SelectionOption('YES', _t('Yes', 'Yes'), 0),
         SelectionOption('NO', _t('No', 'No'), 1),
@@ -2408,7 +2523,7 @@ DERIVED_FEATURES_FIELDS: tuple[FieldSpec, ...] = (
     FieldSpec(
         name='x_development_infrastructure_gas',
         ttype='selection',
-        label=_t('Gas', 'Gas'),
+        label=_t('Development Infrastructure Gas', 'Development Infrastructure Gas'),
         selection=(
         SelectionOption('YES', _t('Yes', 'Yes'), 0),
         SelectionOption('NO', _t('No', 'No'), 1),
@@ -2517,43 +2632,14 @@ DERIVED_FEATURES_FIELDS: tuple[FieldSpec, ...] = (
         ),
         # source: data.features.plot.tilt
     ),
-    FieldSpec(
-        name='x_building_rules',
-        ttype='selection',
-        label=_t('Building Rules', 'Building Rules'),
-        help=_t('German Government Rules for Building Standards', 'German Government Rules for Building Standards'),
-        selection=(
-        SelectionOption('NEIGHBORHOOD_34', _t('Neighborhood 34', 'Neighborhood 34'), 0),
-        SelectionOption('EXTERNALAREA_35', _t('Externalarea 35', 'Externalarea 35'), 1),
-        SelectionOption('B_PLAN', _t('B Plan', 'B Plan'), 2),
-        SelectionOption('NO_BUILDINGAREA', _t('No Buildingarea', 'No Buildingarea'), 3),
-        SelectionOption('DEVELOPMENTAREA', _t('Developmentarea', 'Developmentarea'), 4),
-        SelectionOption('BUILDINGAREA_WITHOUT_PLAN', _t('Buildingarea Without Plan', 'Buildingarea Without Plan'), 5),
-        SelectionOption('COUNTRYSPECIFIC', _t('Countryspecific', 'Countryspecific'), 6),
-        ),
-        # source: data.features.plot.countrySpecific.de.buildingRules
-    ),
-    FieldSpec(
-        name='x_site_development_state',
-        ttype='selection',
-        label=_t('Site Development State', 'Site Development State'),
-        help=_t('German Government Rules for Development;', 'German Government Rules for Development;'),
-        selection=(
-        SelectionOption('UNDEVELOPED', _t('Undeveloped', 'Undeveloped'), 0),
-        SelectionOption('PARTLY_DEVELOPED', _t('Partly Developed', 'Partly Developed'), 1),
-        SelectionOption('FULLY_DEVELOPED', _t('Fully Developed', 'Fully Developed'), 2),
-        SelectionOption('NO_INFORMATION', _t('No Information', 'No Information'), 3),
-        ),
-        # source: data.features.plot.countrySpecific.de.siteDevelopmentState
-    ),
 )
 
-# ---- location (12 fields) ----
+# ---- location (14 fields) ----
 DERIVED_LOCATION_FIELDS: tuple[FieldSpec, ...] = (
     FieldSpec(
         name='x_location_postalcode',
         ttype='char',
-        label=_t('Postalcode', 'Code postal'),
+        label=_t('Location Postalcode', 'Code postal'),
         help=_t('postalcode or zip of the property location. It can be empty when not applicable. Use an empty string for unknown value.', 'postalcode or zip of the property location. It can be empty when not applicable. Use an empty string for unknown value.'),
         size=32,
         # source: data.location.postalcode
@@ -2561,7 +2647,7 @@ DERIVED_LOCATION_FIELDS: tuple[FieldSpec, ...] = (
     FieldSpec(
         name='x_location_city',
         ttype='char',
-        label=_t('City', 'Ville'),
+        label=_t('Location City', 'Ville'),
         help=_t('city where the property is located. It can be empty when not applicable. Use an empty string for unknown value.', 'city where the property is located. It can be empty when not applicable. Use an empty string for unknown value.'),
         size=128,
         # source: data.location.city
@@ -2569,14 +2655,14 @@ DERIVED_LOCATION_FIELDS: tuple[FieldSpec, ...] = (
     FieldSpec(
         name='x_location_street',
         ttype='text',
-        label=_t('Street', 'Rue'),
+        label=_t('Location Street', 'Rue'),
         help=_t('street where the property is located. It can also be a place name or any required neighbourhood information. It can be empty when not applicable. Use an empty string for unknown value.', 'street where the property is located. It can also be a place name or any required neighbourhood information. It can be empty when not applicable. Use an empty string for unknown value.'),
         # source: data.location.street
     ),
     FieldSpec(
         name='x_location_house_number',
         ttype='char',
-        label=_t('House Number', 'Numéro'),
+        label=_t('Location House Number', 'Numéro'),
         help=_t('house number where the property is located. It can be empty when not applicable. Use an empty string for unknown value.', 'house number where the property is located. It can be empty when not applicable. Use an empty string for unknown value.'),
         size=64,
         # source: data.location.houseNumber
@@ -2623,10 +2709,22 @@ DERIVED_LOCATION_FIELDS: tuple[FieldSpec, ...] = (
     FieldSpec(
         name='x_location_country',
         ttype='char',
-        label=_t('Country', 'Pays'),
+        label=_t('Location Country', 'Pays'),
         help=_t('country where the property is located. **Note:** You are strongly encouraged to use ISO3166 country codes instead of country names. You can use the three-letter code (alpha-3) which is more closely related to the country name. ISO3166 country codes will be mandatory in the next major version.', 'country where the property is located. **Note:** You are strongly encouraged to use ISO3166 country codes instead of country names. You can use the three-letter code (alpha-3) which is more closely related to the country name. ISO3166 country codes will be mandatory in the next major version.'),
         size=125,
         # source: data.location.country
+    ),
+    FieldSpec(
+        name='x_location_note_en',
+        ttype='text',
+        label=_t('Location Note En', 'Location Note En'),
+        # source: data.location.locationNote.en
+    ),
+    FieldSpec(
+        name='x_location_note_fr',
+        ttype='text',
+        label=_t('Location Note Fr', 'Location Note Fr'),
+        # source: data.location.locationNote.fr
     ),
     FieldSpec(
         name='x_show_address',
@@ -2644,7 +2742,7 @@ DERIVED_LOCATION_FIELDS: tuple[FieldSpec, ...] = (
     ),
 )
 
-# ---- management (63 fields) ----
+# ---- management (52 fields) ----
 DERIVED_MANAGEMENT_FIELDS: tuple[FieldSpec, ...] = (
     FieldSpec(
         name='x_is_immediately_available',
@@ -2955,102 +3053,6 @@ DERIVED_MANAGEMENT_FIELDS: tuple[FieldSpec, ...] = (
         # source: data.management.compulsoryAuction.isSplittingAuction
     ),
     FieldSpec(
-        name='x_is_as_built_plan_certificate',
-        ttype='boolean',
-        label=_t('Is As Built Plan Certificate', 'Is As Built Plan Certificate'),
-        help=_t('Optional for properties in Flanders. For other regions, the information could be discarded.', 'Optional for properties in Flanders. For other regions, the information could be discarded.'),
-        # source: data.management.countrySpecific.be.isAsBuiltPlanCertificate
-    ),
-    FieldSpec(
-        name='x_construction_type',
-        ttype='selection',
-        label=_t('Construction Type', 'Construction Type'),
-        help=_t('Indicates the land designation.', 'Indicates the land designation.'),
-        selection=(
-        SelectionOption('ALL_KIND', _t('All Kind', 'All Kind'), 0),
-        SelectionOption('APARTMENT_BUILDING', _t('Apartment Building', 'Apartment Building'), 1),
-        SelectionOption('BEL_ETAGE', _t('Bel Etage', 'Bel Etage'), 2),
-        SelectionOption('BUNGALOW', _t('Bungalow', 'Bungalow'), 3),
-        SelectionOption('HOUSE', _t('House', 'House'), 4),
-        SelectionOption('VILLA', _t('Villa', 'Villa'), 5),
-        ),
-        # source: data.management.countrySpecific.be.buildingPermission.constructionType
-    ),
-    FieldSpec(
-        name='x_flood_zone_type',
-        ttype='selection',
-        label=_t('Flood Zone Type', 'Flood Zone Type'),
-        help=_t('Determined by government on a floodzone map per region.', 'Determined by government on a floodzone map per region.'),
-        selection=(
-        SelectionOption('RECOGNIZED_FLOOD_ZONE', _t('Recognized Flood Zone', 'Recognized Flood Zone'), 0),
-        SelectionOption('RECOGNIZED_N_CIRCUMSCRIBED_FLOOD_ZONE', _t('Recognized N Circumscribed Flood Zone', 'Recognized N Circumscribed Flood Zone'), 1),
-        SelectionOption('RECOGNIZED_N_CIRCUMSCRIBED_WATERSIDE_FLOOD_ZONE', _t('Recognized N Circumscribed Waterside Flood Zone', 'Recognized N Circumscribed Waterside Flood Zone'), 2),
-        SelectionOption('POSSIBLE_FLOOD_ZONE', _t('Possible Flood Zone', 'Possible Flood Zone'), 3),
-        SelectionOption('POSSIBLE_N_CIRCUMSCRIBED_FLOOD_ZONE', _t('Possible N Circumscribed Flood Zone', 'Possible N Circumscribed Flood Zone'), 4),
-        SelectionOption('POSSIBLE_N_CIRCUMSCRIBED_WATERSIDE_ZONE', _t('Possible N Circumscribed Waterside Zone', 'Possible N Circumscribed Waterside Zone'), 5),
-        SelectionOption('CIRCUMSCRIBED_FLOOD_ZONE', _t('Circumscribed Flood Zone', 'Circumscribed Flood Zone'), 6),
-        SelectionOption('CIRCUMSCRIBED_WATERSIDE_ZONE', _t('Circumscribed Waterside Zone', 'Circumscribed Waterside Zone'), 7),
-        SelectionOption('NON_FLOOD_ZONE', _t('Non Flood Zone', 'Non Flood Zone'), 8),
-        ),
-        # source: data.management.countrySpecific.be.buildingPermission.floodZoneType
-    ),
-    FieldSpec(
-        name='x_has_obligation_to_construct',
-        ttype='boolean',
-        label=_t('Has Obligation To Construct', 'Has Obligation To Construct'),
-        help=_t('Is subject to an obligation to build.', 'Is subject to an obligation to build.'),
-        # source: data.management.countrySpecific.be.buildingPermission.hasObligationToConstruct
-    ),
-    FieldSpec(
-        name='x_has_plot_division_authorization',
-        ttype='boolean',
-        label=_t('Has Plot Division Authorization', 'Has Plot Division Authorization'),
-        help=_t('Subdivision permit. Information can be find on planning permission.', 'Subdivision permit. Information can be find on planning permission.'),
-        # source: data.management.countrySpecific.be.buildingPermission.hasPlotDivisionAuthorization
-    ),
-    FieldSpec(
-        name='x_has_possible_priority_purchase_right',
-        ttype='boolean',
-        label=_t('Has Possible Priority Purchase Right', 'Has Possible Priority Purchase Right'),
-        help=_t('The priority purchase right gives the public authorities priority over any other buyer in the sale of a property.', 'The priority purchase right gives the public authorities priority over any other buyer in the sale of a property.'),
-        # source: data.management.countrySpecific.be.buildingPermission.hasPossiblePriorityPurchaseRight
-    ),
-    FieldSpec(
-        name='x_is_breaching_urban_planning_regulation',
-        ttype='boolean',
-        label=_t('Is Breaching Urban Planning Regulation', 'Is Breaching Urban Planning Regulation'),
-        help=_t('Proceedings for breach of planning regulations. Indicates the land designation.', 'Proceedings for breach of planning regulations. Indicates the land designation.'),
-        # source: data.management.countrySpecific.be.buildingPermission.isBreachingUrbanPlanningRegulation
-    ),
-    FieldSpec(
-        name='x_is_indexed',
-        ttype='boolean',
-        label=_t('Is Indexed', 'Is Indexed'),
-        help=_t('Indicates the indexed annuity.', 'Indicates the indexed annuity.'),
-        # source: data.management.countrySpecific.be.lifeAnnuity.isIndexed
-    ),
-    FieldSpec(
-        name='x_is_joint_and_survivor_contract',
-        ttype='boolean',
-        label=_t('Is Joint And Survivor Contract', 'Is Joint And Survivor Contract'),
-        help=_t('Indicates if it is an annuity contract that guarantees payments so long as the contract owner or a secondary annuitant lives.', 'Indicates if it is an annuity contract that guarantees payments so long as the contract owner or a secondary annuitant lives.'),
-        # source: data.management.countrySpecific.be.lifeAnnuity.isJointAndSurvivorContract
-    ),
-    FieldSpec(
-        name='x_is_bare_ownership',
-        ttype='boolean',
-        label=_t('Is Bare Ownership', 'Is Bare Ownership'),
-        help=_t('Indicates if there is a right of virtual ownership.', 'Indicates if there is a right of virtual ownership.'),
-        # source: data.management.countrySpecific.be.lifeAnnuity.isBareOwnership
-    ),
-    FieldSpec(
-        name='x_count',
-        ttype='integer',
-        label=_t('Count', 'Count'),
-        help=_t('Indicates the number of annuitants.', 'Indicates the number of annuitants.'),
-        # source: data.management.countrySpecific.be.lifeAnnuity.annuitants.count
-    ),
-    FieldSpec(
         name='x_is_usage_change',
         ttype='boolean',
         label=_t('Is Usage Change', 'Is Usage Change'),
@@ -3074,7 +3076,7 @@ DERIVED_MANAGEMENT_FIELDS: tuple[FieldSpec, ...] = (
     FieldSpec(
         name='x_fr_number_of_units',
         ttype='integer',
-        label=_t('Number Of Units', 'Number Of Units'),
+        label=_t('Fr Number Of Units', 'Fr Number Of Units'),
         help=_t('Number of lots in the condominium (nombre de lots)', 'Number of lots in the condominium (nombre de lots)'),
         # source: data.management.countrySpecific.fr.numberOfUnits
     ),
@@ -3275,8 +3277,164 @@ DERIVED_META_DATA_FIELDS: tuple[FieldSpec, ...] = (
     ),
 )
 
-# ---- prices (61 fields) ----
+# ---- prices (163 fields) ----
 DERIVED_PRICES_FIELDS: tuple[FieldSpec, ...] = (
+    FieldSpec(
+        name='x_price_amount',
+        ttype='float',
+        label=_t('Price Amount', 'Price Amount'),
+        help=_t('amount of the select priceType', 'amount of the select priceType'),
+        # source: data.prices.buy.price.amount
+    ),
+    FieldSpec(
+        name='x_price_vat_value',
+        ttype='float',
+        label=_t('Price Vat Value', 'Price Vat Value'),
+        help=_t('the vat value in currency', 'the vat value in currency'),
+        # source: data.prices.buy.price.vatValue
+    ),
+    FieldSpec(
+        name='x_price_vat_percent',
+        ttype='float',
+        label=_t('Price Vat Percent', 'Price Vat Percent'),
+        help=_t('the vat value in percent', 'the vat value in percent'),
+        # source: data.prices.buy.price.vatPercent
+    ),
+    FieldSpec(
+        name='x_price_is_vat_included',
+        ttype='boolean',
+        label=_t('Price Is Vat Included', 'Price Is Vat Included'),
+        help=_t('vat is included in the price', 'vat is included in the price'),
+        # source: data.prices.buy.price.isVatIncluded
+    ),
+    FieldSpec(
+        name='x_price_price_information',
+        ttype='selection',
+        label=_t('Price Price Information', 'Price Price Information'),
+        help=_t('- PRICE_ON_DEMAND: specific flag for displaying this price on the portal/website. If PRICE_ON_DEMAND is chosen, the price MUST NOT be shown! It may only be used as search price! - BASIS_FOR_NEGOTIATION: the price is not fixed, it is negotiable. If the price is FIXED, priceInformation should not be sent.', '- PRICE_ON_DEMAND: specific flag for displaying this price on the portal/website. If PRICE_ON_DEMAND is chosen, the price MUST NOT be shown! It may only be used as search price! - BASIS_FOR_NEGOTIATION: the price is not fixed, it is negotiable. If the price is FIXED, priceInformation should not be sent.'),
+        selection=(
+        SelectionOption('PRICE_ON_DEMAND', _t('Price On Demand', 'Price On Demand'), 0),
+        SelectionOption('BASIS_FOR_NEGOTIATION', _t('Basis For Negotiation', 'Basis For Negotiation'), 1),
+        ),
+        # source: data.prices.buy.price.priceInformation
+    ),
+    FieldSpec(
+        name='x_min_buy_amount',
+        ttype='float',
+        label=_t('Min Buy Amount', 'Min Buy Amount'),
+        help=_t('amount of the select priceType', 'amount of the select priceType'),
+        # source: data.prices.buy.minBuy.amount
+    ),
+    FieldSpec(
+        name='x_min_buy_vat_value',
+        ttype='float',
+        label=_t('Min Buy Vat Value', 'Min Buy Vat Value'),
+        help=_t('the vat value in currency', 'the vat value in currency'),
+        # source: data.prices.buy.minBuy.vatValue
+    ),
+    FieldSpec(
+        name='x_min_buy_vat_percent',
+        ttype='float',
+        label=_t('Min Buy Vat Percent', 'Min Buy Vat Percent'),
+        help=_t('the vat value in percent', 'the vat value in percent'),
+        # source: data.prices.buy.minBuy.vatPercent
+    ),
+    FieldSpec(
+        name='x_min_buy_is_vat_included',
+        ttype='boolean',
+        label=_t('Min Buy Is Vat Included', 'Min Buy Is Vat Included'),
+        help=_t('vat is included in the price', 'vat is included in the price'),
+        # source: data.prices.buy.minBuy.isVatIncluded
+    ),
+    FieldSpec(
+        name='x_min_buy_price_information',
+        ttype='selection',
+        label=_t('Min Buy Price Information', 'Min Buy Price Information'),
+        help=_t('- PRICE_ON_DEMAND: specific flag for displaying this price on the portal/website. If PRICE_ON_DEMAND is chosen, the price MUST NOT be shown! It may only be used as search price! - BASIS_FOR_NEGOTIATION: the price is not fixed, it is negotiable. If the price is FIXED, priceInformation should not be sent.', '- PRICE_ON_DEMAND: specific flag for displaying this price on the portal/website. If PRICE_ON_DEMAND is chosen, the price MUST NOT be shown! It may only be used as search price! - BASIS_FOR_NEGOTIATION: the price is not fixed, it is negotiable. If the price is FIXED, priceInformation should not be sent.'),
+        selection=(
+        SelectionOption('PRICE_ON_DEMAND', _t('Price On Demand', 'Price On Demand'), 0),
+        SelectionOption('BASIS_FOR_NEGOTIATION', _t('Basis For Negotiation', 'Basis For Negotiation'), 1),
+        ),
+        # source: data.prices.buy.minBuy.priceInformation
+    ),
+    FieldSpec(
+        name='x_house_price_amount',
+        ttype='float',
+        label=_t('House Price Amount', 'House Price Amount'),
+        help=_t('amount of the select priceType', 'amount of the select priceType'),
+        # source: data.prices.buy.housePrice.amount
+    ),
+    FieldSpec(
+        name='x_house_price_vat_value',
+        ttype='float',
+        label=_t('House Price Vat Value', 'House Price Vat Value'),
+        help=_t('the vat value in currency', 'the vat value in currency'),
+        # source: data.prices.buy.housePrice.vatValue
+    ),
+    FieldSpec(
+        name='x_house_price_vat_percent',
+        ttype='float',
+        label=_t('House Price Vat Percent', 'House Price Vat Percent'),
+        help=_t('the vat value in percent', 'the vat value in percent'),
+        # source: data.prices.buy.housePrice.vatPercent
+    ),
+    FieldSpec(
+        name='x_house_price_is_vat_included',
+        ttype='boolean',
+        label=_t('House Price Is Vat Included', 'House Price Is Vat Included'),
+        help=_t('vat is included in the price', 'vat is included in the price'),
+        # source: data.prices.buy.housePrice.isVatIncluded
+    ),
+    FieldSpec(
+        name='x_house_price_price_information',
+        ttype='selection',
+        label=_t('House Price Price Information', 'House Price Price Information'),
+        help=_t('- PRICE_ON_DEMAND: specific flag for displaying this price on the portal/website. If PRICE_ON_DEMAND is chosen, the price MUST NOT be shown! It may only be used as search price! - BASIS_FOR_NEGOTIATION: the price is not fixed, it is negotiable. If the price is FIXED, priceInformation should not be sent.', '- PRICE_ON_DEMAND: specific flag for displaying this price on the portal/website. If PRICE_ON_DEMAND is chosen, the price MUST NOT be shown! It may only be used as search price! - BASIS_FOR_NEGOTIATION: the price is not fixed, it is negotiable. If the price is FIXED, priceInformation should not be sent.'),
+        selection=(
+        SelectionOption('PRICE_ON_DEMAND', _t('Price On Demand', 'Price On Demand'), 0),
+        SelectionOption('BASIS_FOR_NEGOTIATION', _t('Basis For Negotiation', 'Basis For Negotiation'), 1),
+        ),
+        # source: data.prices.buy.housePrice.priceInformation
+    ),
+    FieldSpec(
+        name='x_plot_price_amount',
+        ttype='float',
+        label=_t('Plot Price Amount', 'Plot Price Amount'),
+        help=_t('amount of the select priceType', 'amount of the select priceType'),
+        # source: data.prices.buy.plotPrice.amount
+    ),
+    FieldSpec(
+        name='x_plot_price_vat_value',
+        ttype='float',
+        label=_t('Plot Price Vat Value', 'Plot Price Vat Value'),
+        help=_t('the vat value in currency', 'the vat value in currency'),
+        # source: data.prices.buy.plotPrice.vatValue
+    ),
+    FieldSpec(
+        name='x_plot_price_vat_percent',
+        ttype='float',
+        label=_t('Plot Price Vat Percent', 'Plot Price Vat Percent'),
+        help=_t('the vat value in percent', 'the vat value in percent'),
+        # source: data.prices.buy.plotPrice.vatPercent
+    ),
+    FieldSpec(
+        name='x_plot_price_is_vat_included',
+        ttype='boolean',
+        label=_t('Plot Price Is Vat Included', 'Plot Price Is Vat Included'),
+        help=_t('vat is included in the price', 'vat is included in the price'),
+        # source: data.prices.buy.plotPrice.isVatIncluded
+    ),
+    FieldSpec(
+        name='x_plot_price_price_information',
+        ttype='selection',
+        label=_t('Plot Price Price Information', 'Plot Price Price Information'),
+        help=_t('- PRICE_ON_DEMAND: specific flag for displaying this price on the portal/website. If PRICE_ON_DEMAND is chosen, the price MUST NOT be shown! It may only be used as search price! - BASIS_FOR_NEGOTIATION: the price is not fixed, it is negotiable. If the price is FIXED, priceInformation should not be sent.', '- PRICE_ON_DEMAND: specific flag for displaying this price on the portal/website. If PRICE_ON_DEMAND is chosen, the price MUST NOT be shown! It may only be used as search price! - BASIS_FOR_NEGOTIATION: the price is not fixed, it is negotiable. If the price is FIXED, priceInformation should not be sent.'),
+        selection=(
+        SelectionOption('PRICE_ON_DEMAND', _t('Price On Demand', 'Price On Demand'), 0),
+        SelectionOption('BASIS_FOR_NEGOTIATION', _t('Basis For Negotiation', 'Basis For Negotiation'), 1),
+        ),
+        # source: data.prices.buy.plotPrice.priceInformation
+    ),
     FieldSpec(
         name='x_is_lease_buy_combi',
         ttype='boolean',
@@ -3294,14 +3452,14 @@ DERIVED_PRICES_FIELDS: tuple[FieldSpec, ...] = (
     FieldSpec(
         name='x_leasehold_amount',
         ttype='float',
-        label=_t('Amount', 'Amount'),
+        label=_t('Leasehold Amount', 'Leasehold Amount'),
         help=_t('amount of the leasehold rent', 'amount of the leasehold rent'),
         # source: data.prices.buy.leasehold.amount
     ),
     FieldSpec(
         name='x_leasehold_price_time_unit',
         ttype='selection',
-        label=_t('Price Time Unit', 'Price Time Unit'),
+        label=_t('Leasehold Price Time Unit', 'Leasehold Price Time Unit'),
         help=_t('when does the leaseholdRent have to be paid, per month or per year', 'when does the leaseholdRent have to be paid, per month or per year'),
         selection=(
         SelectionOption('MONTH', _t('Month', 'Month'), 0),
@@ -3319,64 +3477,214 @@ DERIVED_PRICES_FIELDS: tuple[FieldSpec, ...] = (
     FieldSpec(
         name='x_leasehold_end_date',
         ttype='date',
-        label=_t('End Date', 'End Date'),
+        label=_t('Leasehold End Date', 'Leasehold End Date'),
         help=_t('date when the leasehold ends.', 'date when the leasehold ends.'),
         # source: data.prices.buy.leasehold.endDate
     ),
     FieldSpec(
-        name='x_operating_costs_price_time_unit',
-        ttype='selection',
-        label=_t('Price Time Unit', 'Price Time Unit'),
-        help=_t('time unit for the price', 'time unit for the price'),
-        selection=(
-        SelectionOption('DAY', _t('Day', 'Day'), 0),
-        SelectionOption('WEEK', _t('Week', 'Week'), 1),
-        SelectionOption('MONTH', _t('Month', 'Month'), 2),
-        SelectionOption('YEAR', _t('Year', 'Year'), 3),
-        ),
-        # source: data.prices.buy.operatingCosts.priceTimeUnit
+        name='x_buy_operating_costs_amount',
+        ttype='float',
+        label=_t('Buy Operating Costs Amount', 'Buy Operating Costs Amount'),
+        help=_t('amount of the select priceType', 'amount of the select priceType'),
+        # source: data.prices.buy.operatingCosts.amount
     ),
     FieldSpec(
-        name='x_rental_income_price_time_unit',
-        ttype='selection',
-        label=_t('Price Time Unit', 'Price Time Unit'),
-        help=_t('rental income period', 'rental income period'),
-        selection=(
-        SelectionOption('MONTH', _t('Month', 'Month'), 0),
-        SelectionOption('YEAR', _t('Year', 'Year'), 1),
-        ),
-        # source: data.prices.buy.rentalIncome.priceTimeUnit
+        name='x_buy_operating_costs_vat_value',
+        ttype='float',
+        label=_t('Buy Operating Costs Vat Value', 'Buy Operating Costs Vat Value'),
+        help=_t('the vat value in currency', 'the vat value in currency'),
+        # source: data.prices.buy.operatingCosts.vatValue
     ),
     FieldSpec(
-        name='x_rental_income_price_information',
-        ttype='char',
-        label=_t('Price Information', 'Price Information'),
-        help=_t('DEPRECATED Tag for price information but no relevant here', 'DEPRECATED Tag for price information but no relevant here'),
-        # source: data.prices.buy.rentalIncome.priceInformation
+        name='x_buy_operating_costs_vat_percent',
+        ttype='float',
+        label=_t('Buy Operating Costs Vat Percent', 'Buy Operating Costs Vat Percent'),
+        help=_t('the vat value in percent', 'the vat value in percent'),
+        # source: data.prices.buy.operatingCosts.vatPercent
     ),
     FieldSpec(
-        name='x_rental_income_expect_price_time_unit',
-        ttype='selection',
-        label=_t('Price Time Unit', 'Price Time Unit'),
-        help=_t('rental income period', 'rental income period'),
-        selection=(
-        SelectionOption('MONTH', _t('Month', 'Month'), 0),
-        SelectionOption('YEAR', _t('Year', 'Year'), 1),
-        ),
-        # source: data.prices.buy.rentalIncomeExpect.priceTimeUnit
-    ),
-    FieldSpec(
-        name='x_rental_income_expect_price_information',
-        ttype='char',
-        label=_t('Price Information', 'Price Information'),
-        help=_t('DEPRECATED Tag for price information but no relevant here', 'DEPRECATED Tag for price information but no relevant here'),
-        # source: data.prices.buy.rentalIncomeExpect.priceInformation
-    ),
-    FieldSpec(
-        name='x_is_operating_costs_included',
+        name='x_buy_operating_costs_is_vat_included',
         ttype='boolean',
-        label=_t('Is Operating Costs Included', 'Is Operating Costs Included'),
-        # source: data.prices.buy.parkingPrice.isOperatingCostsIncluded
+        label=_t('Buy Operating Costs Is Vat Included', 'Buy Operating Costs Is Vat Included'),
+        help=_t('vat is included in the price', 'vat is included in the price'),
+        # source: data.prices.buy.operatingCosts.isVatIncluded
+    ),
+    FieldSpec(
+        name='x_buy_operating_costs_price_information',
+        ttype='selection',
+        label=_t('Buy Operating Costs Price Information', 'Buy Operating Costs Price Information'),
+        help=_t('- PRICE_ON_DEMAND: specific flag for displaying this price on the portal/website. If PRICE_ON_DEMAND is chosen, the price MUST NOT be shown! It may only be used as search price! - BASIS_FOR_NEGOTIATION: the price is not fixed, it is negotiable. If the price is FIXED, priceInformation should not be sent.', '- PRICE_ON_DEMAND: specific flag for displaying this price on the portal/website. If PRICE_ON_DEMAND is chosen, the price MUST NOT be shown! It may only be used as search price! - BASIS_FOR_NEGOTIATION: the price is not fixed, it is negotiable. If the price is FIXED, priceInformation should not be sent.'),
+        selection=(
+        SelectionOption('PRICE_ON_DEMAND', _t('Price On Demand', 'Price On Demand'), 0),
+        SelectionOption('BASIS_FOR_NEGOTIATION', _t('Basis For Negotiation', 'Basis For Negotiation'), 1),
+        ),
+        # source: data.prices.buy.operatingCosts.priceInformation
+    ),
+    FieldSpec(
+        name='x_buy_operating_costs_accounting',
+        ttype='selection',
+        label=_t('Buy Operating Costs Accounting', 'Buy Operating Costs Accounting'),
+        help=_t('How often the costs are paid and how: - FIXED: fixed amount paid each time unit - REAL_USAGE: amount calculated on real usage paid each time unit - ADJUSTMENT: fixed amount paid each time unit and regular (yearly?) adjustment based on real usage', 'How often the costs are paid and how: - FIXED: fixed amount paid each time unit - REAL_USAGE: amount calculated on real usage paid each time unit - ADJUSTMENT: fixed amount paid each time unit and regular (yearly?) adjustment based on real usage'),
+        selection=(
+        SelectionOption('FIXED', _t('Fixed', 'Fixed'), 0),
+        SelectionOption('REAL_USAGE', _t('Real Usage', 'Real Usage'), 1),
+        SelectionOption('ADJUSTMENT', _t('Adjustment', 'Adjustment'), 2),
+        ),
+        # source: data.prices.buy.operatingCosts.accounting
+    ),
+    FieldSpec(
+        name='x_rental_income_amount',
+        ttype='float',
+        label=_t('Rental Income Amount', 'Rental Income Amount'),
+        help=_t('amount of the select priceType', 'amount of the select priceType'),
+        # source: data.prices.buy.rentalIncome.amount
+    ),
+    FieldSpec(
+        name='x_rental_income_vat_value',
+        ttype='float',
+        label=_t('Rental Income Vat Value', 'Rental Income Vat Value'),
+        help=_t('the vat value in currency', 'the vat value in currency'),
+        # source: data.prices.buy.rentalIncome.vatValue
+    ),
+    FieldSpec(
+        name='x_rental_income_vat_percent',
+        ttype='float',
+        label=_t('Rental Income Vat Percent', 'Rental Income Vat Percent'),
+        help=_t('the vat value in percent', 'the vat value in percent'),
+        # source: data.prices.buy.rentalIncome.vatPercent
+    ),
+    FieldSpec(
+        name='x_rental_income_is_vat_included',
+        ttype='boolean',
+        label=_t('Rental Income Is Vat Included', 'Rental Income Is Vat Included'),
+        help=_t('vat is included in the price', 'vat is included in the price'),
+        # source: data.prices.buy.rentalIncome.isVatIncluded
+    ),
+    FieldSpec(
+        name='x_rental_income_expect_amount',
+        ttype='float',
+        label=_t('Rental Income Expect Amount', 'Rental Income Expect Amount'),
+        help=_t('amount of the select priceType', 'amount of the select priceType'),
+        # source: data.prices.buy.rentalIncomeExpect.amount
+    ),
+    FieldSpec(
+        name='x_rental_income_expect_vat_value',
+        ttype='float',
+        label=_t('Rental Income Expect Vat Value', 'Rental Income Expect Vat Value'),
+        help=_t('the vat value in currency', 'the vat value in currency'),
+        # source: data.prices.buy.rentalIncomeExpect.vatValue
+    ),
+    FieldSpec(
+        name='x_rental_income_expect_vat_percent',
+        ttype='float',
+        label=_t('Rental Income Expect Vat Percent', 'Rental Income Expect Vat Percent'),
+        help=_t('the vat value in percent', 'the vat value in percent'),
+        # source: data.prices.buy.rentalIncomeExpect.vatPercent
+    ),
+    FieldSpec(
+        name='x_rental_income_expect_is_vat_included',
+        ttype='boolean',
+        label=_t('Rental Income Expect Is Vat Included', 'Rental Income Expect Is Vat Included'),
+        help=_t('vat is included in the price', 'vat is included in the price'),
+        # source: data.prices.buy.rentalIncomeExpect.isVatIncluded
+    ),
+    FieldSpec(
+        name='x_parking_price_amount',
+        ttype='float',
+        label=_t('Parking Price Amount', 'Parking Price Amount'),
+        help=_t('amount of the select priceType', 'amount of the select priceType'),
+        # source: data.prices.buy.parkingPrice.amount
+    ),
+    FieldSpec(
+        name='x_parking_price_vat_value',
+        ttype='float',
+        label=_t('Parking Price Vat Value', 'Parking Price Vat Value'),
+        help=_t('the vat value in currency', 'the vat value in currency'),
+        # source: data.prices.buy.parkingPrice.vatValue
+    ),
+    FieldSpec(
+        name='x_parking_price_vat_percent',
+        ttype='float',
+        label=_t('Parking Price Vat Percent', 'Parking Price Vat Percent'),
+        help=_t('the vat value in percent', 'the vat value in percent'),
+        # source: data.prices.buy.parkingPrice.vatPercent
+    ),
+    FieldSpec(
+        name='x_parking_price_is_vat_included',
+        ttype='boolean',
+        label=_t('Parking Price Is Vat Included', 'Parking Price Is Vat Included'),
+        help=_t('vat is included in the price', 'vat is included in the price'),
+        # source: data.prices.buy.parkingPrice.isVatIncluded
+    ),
+    FieldSpec(
+        name='x_parking_price_price_information',
+        ttype='selection',
+        label=_t('Parking Price Price Information', 'Parking Price Price Information'),
+        help=_t('- PRICE_ON_DEMAND: specific flag for displaying this price on the portal/website. If PRICE_ON_DEMAND is chosen, the price MUST NOT be shown! It may only be used as search price! - BASIS_FOR_NEGOTIATION: the price is not fixed, it is negotiable. If the price is FIXED, priceInformation should not be sent.', '- PRICE_ON_DEMAND: specific flag for displaying this price on the portal/website. If PRICE_ON_DEMAND is chosen, the price MUST NOT be shown! It may only be used as search price! - BASIS_FOR_NEGOTIATION: the price is not fixed, it is negotiable. If the price is FIXED, priceInformation should not be sent.'),
+        selection=(
+        SelectionOption('PRICE_ON_DEMAND', _t('Price On Demand', 'Price On Demand'), 0),
+        SelectionOption('BASIS_FOR_NEGOTIATION', _t('Basis For Negotiation', 'Basis For Negotiation'), 1),
+        ),
+        # source: data.prices.buy.parkingPrice.priceInformation
+    ),
+    FieldSpec(
+        name='x_parking_price_parking_style',
+        ttype='selection',
+        label=_t('Parking Price Parking Style', 'Parking Price Parking Style'),
+        help=_t('if the property has an additional garage/parking space then you can specify the parking style in details here. A parking lot can only be described by one (the most appropriate) item, not by several. Descriptions for the enums above: - OUTSIDE: a parking space that is outside, not in a garage - STREET_PARKING: a parking space along the street - CARPORT: a shelter for vehicles that is open-sided and usually attached to a house - GARAGE: a building for parking one vehicle usually with a vertical rolling door - DOUBLE_GARAGE: like a garage but for two vehicles - DUPLEX: double parking on one parki…', 'if the property has an additional garage/parking space then you can specify the parking style in details here. A parking lot can only be described by one (the most appropriate) item, not by several. Descriptions for the enums above: - OUTSIDE: a parking space that is outside, not in a garage - STREET_PARKING: a parking space along the street - CARPORT: a shelter for vehicles that is open-sided and usually attached to a house - GARAGE: a building for parking one vehicle usually with a vertical rolling door - DOUBLE_GARAGE: like a garage but for two vehicles - DUPLEX: double parking on one parki…'),
+        selection=(
+        SelectionOption('OUTSIDE', _t('Outside', 'Outside'), 0),
+        SelectionOption('STREET_PARKING', _t('Street Parking', 'Street Parking'), 1),
+        SelectionOption('CARPORT', _t('Carport', 'Carport'), 2),
+        SelectionOption('GARAGE', _t('Garage', 'Garage'), 3),
+        SelectionOption('DOUBLE_GARAGE', _t('Double Garage', 'Double Garage'), 4),
+        SelectionOption('DUPLEX', _t('Duplex', 'Duplex'), 5),
+        SelectionOption('GARAGE_AREA', _t('Garage Area', 'Garage Area'), 6),
+        SelectionOption('PARKING_AREA', _t('Parking Area', 'Parking Area'), 7),
+        SelectionOption('CAR_PARK', _t('Car Park', 'Car Park'), 8),
+        SelectionOption('UNDERGROUND', _t('Underground', 'Underground'), 9),
+        SelectionOption('BOAT_DOCK', _t('Boat Dock', 'Boat Dock'), 10),
+        ),
+        # source: data.prices.buy.parkingPrice.parkingStyle
+    ),
+    FieldSpec(
+        name='x_buy_price_per_sq_unit_amount',
+        ttype='float',
+        label=_t('Buy Price Per Sq Unit Amount', 'Buy Price Per Sq Unit Amount'),
+        help=_t('amount of the select priceType', 'amount of the select priceType'),
+        # source: data.prices.buy.pricePerSqUnit.amount
+    ),
+    FieldSpec(
+        name='x_buy_price_per_sq_unit_vat_value',
+        ttype='float',
+        label=_t('Buy Price Per Sq Unit Vat Value', 'Buy Price Per Sq Unit Vat Value'),
+        help=_t('the vat value in currency', 'the vat value in currency'),
+        # source: data.prices.buy.pricePerSqUnit.vatValue
+    ),
+    FieldSpec(
+        name='x_buy_price_per_sq_unit_vat_percent',
+        ttype='float',
+        label=_t('Buy Price Per Sq Unit Vat Percent', 'Buy Price Per Sq Unit Vat Percent'),
+        help=_t('the vat value in percent', 'the vat value in percent'),
+        # source: data.prices.buy.pricePerSqUnit.vatPercent
+    ),
+    FieldSpec(
+        name='x_buy_price_per_sq_unit_is_vat_included',
+        ttype='boolean',
+        label=_t('Buy Price Per Sq Unit Is Vat Included', 'Buy Price Per Sq Unit Is Vat Included'),
+        help=_t('vat is included in the price', 'vat is included in the price'),
+        # source: data.prices.buy.pricePerSqUnit.isVatIncluded
+    ),
+    FieldSpec(
+        name='x_buy_price_per_sq_unit_price_information',
+        ttype='selection',
+        label=_t('Buy Price Per Sq Unit Price Information', 'Buy Price Per Sq Unit Price Information'),
+        help=_t('- PRICE_ON_DEMAND: specific flag for displaying this price on the portal/website. If PRICE_ON_DEMAND is chosen, the price MUST NOT be shown! It may only be used as search price! - BASIS_FOR_NEGOTIATION: the price is not fixed, it is negotiable. If the price is FIXED, priceInformation should not be sent.', '- PRICE_ON_DEMAND: specific flag for displaying this price on the portal/website. If PRICE_ON_DEMAND is chosen, the price MUST NOT be shown! It may only be used as search price! - BASIS_FOR_NEGOTIATION: the price is not fixed, it is negotiable. If the price is FIXED, priceInformation should not be sent.'),
+        selection=(
+        SelectionOption('PRICE_ON_DEMAND', _t('Price On Demand', 'Price On Demand'), 0),
+        SelectionOption('BASIS_FOR_NEGOTIATION', _t('Basis For Negotiation', 'Basis For Negotiation'), 1),
+        ),
+        # source: data.prices.buy.pricePerSqUnit.priceInformation
     ),
     FieldSpec(
         name='x_yield_factor',
@@ -3384,34 +3692,6 @@ DERIVED_PRICES_FIELDS: tuple[FieldSpec, ...] = (
         label=_t('Yield Factor', 'Yield Factor'),
         help=_t('for the calculation of the return. calculation: purchase price divided by annual rental income', 'for the calculation of the return. calculation: purchase price divided by annual rental income'),
         # source: data.prices.buy.yieldFactor
-    ),
-    FieldSpec(
-        name='x_is_subject_to_vat',
-        ttype='boolean',
-        label=_t('Is Subject To Vat', 'Is Subject To Vat'),
-        help=_t('If false, a label newbuild will be displayed.', 'If false, a label newbuild will be displayed.'),
-        # source: data.prices.buy.countrySpecific.be.isSubjectToVat
-    ),
-    FieldSpec(
-        name='x_estimated_property_value',
-        ttype='integer',
-        label=_t('Estimated Property Value', 'Estimated Property Value'),
-        help=_t('Indicates the estimated value of the property.', 'Indicates the estimated value of the property.'),
-        # source: data.prices.buy.countrySpecific.be.lifeAnnuity.estimatedPropertyValue
-    ),
-    FieldSpec(
-        name='x_lump_sum',
-        ttype='integer',
-        label=_t('Lump Sum', 'Lump Sum'),
-        help=_t('Indicates the Lump sum (be: "bouquet").', 'Indicates the Lump sum (be: "bouquet").'),
-        # source: data.prices.buy.countrySpecific.be.lifeAnnuity.lumpSum
-    ),
-    FieldSpec(
-        name='x_monthly_amount',
-        ttype='integer',
-        label=_t('Monthly Amount', 'Monthly Amount'),
-        help=_t('Indicates the monthly annuity.', 'Indicates the monthly annuity.'),
-        # source: data.prices.buy.countrySpecific.be.lifeAnnuity.monthlyAmount
     ),
     FieldSpec(
         name='x_is_reduced_notary_fees',
@@ -3432,39 +3712,340 @@ DERIVED_PRICES_FIELDS: tuple[FieldSpec, ...] = (
         # source: data.prices.buy.countrySpecific.fr.notaryFeesFor
     ),
     FieldSpec(
-        name='x_buy_country_specific_at_operating_costs_net_amount',
+        name='x_life_annuity_amount',
         ttype='float',
-        label=_t('Amount', 'Amount'),
-        help=_t('operating costs excl. vat (as in the operating costs catalog); de: BetriebskostenNetto exkl. Ust (lt.BK-Katalog)', 'operating costs excl. vat (as in the operating costs catalog); de: BetriebskostenNetto exkl. Ust (lt.BK-Katalog)'),
-        # source: data.prices.buy.countrySpecific.at.operatingCostsNet.amount
+        label=_t('Life Annuity Amount', 'Life Annuity Amount'),
+        help=_t('amount of the select priceType', 'amount of the select priceType'),
+        # source: data.prices.buy.countrySpecific.fr.lifeAnnuity.amount
     ),
     FieldSpec(
-        name='x_buy_country_specific_at_heating_costs_net_amount',
+        name='x_life_annuity_vat_value',
         ttype='float',
-        label=_t('Amount', 'Amount'),
-        help=_t('heatingCosts excl. vat (if 0, no heatingCosts are included in totalRent) de: HeizkostenNetto; Heizkosten exkl. USt (wenn 0, dann keine HK in Warmmiete enthalten)', 'heatingCosts excl. vat (if 0, no heatingCosts are included in totalRent) de: HeizkostenNetto; Heizkosten exkl. USt (wenn 0, dann keine HK in Warmmiete enthalten)'),
-        # source: data.prices.buy.countrySpecific.at.heatingCostsNet.amount
+        label=_t('Life Annuity Vat Value', 'Life Annuity Vat Value'),
+        help=_t('the vat value in currency', 'the vat value in currency'),
+        # source: data.prices.buy.countrySpecific.fr.lifeAnnuity.vatValue
     ),
     FieldSpec(
-        name='x_buy_country_specific_at_misc_costs_net_amount',
+        name='x_life_annuity_vat_percent',
         ttype='float',
-        label=_t('Amount', 'Amount'),
-        help=_t('overallLoadGross minus rentNet, operatingCostsNet, heatingCostsNet, overallLoadVat; de: SonstigeKostenNetto; MonatlichKostenBrutto abzgl, BetriebskostenNetto, HeizkostenNetto und MonatlicheKostenUst', 'overallLoadGross minus rentNet, operatingCostsNet, heatingCostsNet, overallLoadVat; de: SonstigeKostenNetto; MonatlichKostenBrutto abzgl, BetriebskostenNetto, HeizkostenNetto und MonatlicheKostenUst'),
-        # source: data.prices.buy.countrySpecific.at.miscCostsNet.amount
+        label=_t('Life Annuity Vat Percent', 'Life Annuity Vat Percent'),
+        help=_t('the vat value in percent', 'the vat value in percent'),
+        # source: data.prices.buy.countrySpecific.fr.lifeAnnuity.vatPercent
     ),
     FieldSpec(
-        name='x_vat_costs_per_month',
-        ttype='float',
-        label=_t('Vat Costs Per Month', 'Vat Costs Per Month'),
-        help=_t('sum of the monthly vat costs de: MonatlicheKostenUSt; summe der monatlichen MwSt Kosten', 'sum of the monthly vat costs de: MonatlicheKostenUSt; summe der monatlichen MwSt Kosten'),
-        # source: data.prices.buy.countrySpecific.at.vatCostsPerMonth
+        name='x_life_annuity_is_vat_included',
+        ttype='boolean',
+        label=_t('Life Annuity Is Vat Included', 'Life Annuity Is Vat Included'),
+        help=_t('vat is included in the price', 'vat is included in the price'),
+        # source: data.prices.buy.countrySpecific.fr.lifeAnnuity.isVatIncluded
     ),
     FieldSpec(
-        name='x_costs_per_month_gross_amount',
+        name='x_life_annuity_price_information',
+        ttype='selection',
+        label=_t('Life Annuity Price Information', 'Life Annuity Price Information'),
+        help=_t('- PRICE_ON_DEMAND: specific flag for displaying this price on the portal/website. If PRICE_ON_DEMAND is chosen, the price MUST NOT be shown! It may only be used as search price! - BASIS_FOR_NEGOTIATION: the price is not fixed, it is negotiable. If the price is FIXED, priceInformation should not be sent.', '- PRICE_ON_DEMAND: specific flag for displaying this price on the portal/website. If PRICE_ON_DEMAND is chosen, the price MUST NOT be shown! It may only be used as search price! - BASIS_FOR_NEGOTIATION: the price is not fixed, it is negotiable. If the price is FIXED, priceInformation should not be sent.'),
+        selection=(
+        SelectionOption('PRICE_ON_DEMAND', _t('Price On Demand', 'Price On Demand'), 0),
+        SelectionOption('BASIS_FOR_NEGOTIATION', _t('Basis For Negotiation', 'Basis For Negotiation'), 1),
+        ),
+        # source: data.prices.buy.countrySpecific.fr.lifeAnnuity.priceInformation
+    ),
+    FieldSpec(
+        name='x_base_rent_amount',
         ttype='float',
-        label=_t('Amount', 'Amount'),
-        help=_t('sum of the monthly costs gross (incl. vat, additionalCosts, heatingCosts, other costs) de: MonatlicheKostenBrutto; Summe monatlicher Kosten (inkl.Ust, BK, HK, Sonstige)', 'sum of the monthly costs gross (incl. vat, additionalCosts, heatingCosts, other costs) de: MonatlicheKostenBrutto; Summe monatlicher Kosten (inkl.Ust, BK, HK, Sonstige)'),
-        # source: data.prices.buy.countrySpecific.at.costsPerMonthGross.amount
+        label=_t('Base Rent Amount', 'Base Rent Amount'),
+        help=_t('amount of the select priceType', 'amount of the select priceType'),
+        # source: data.prices.rent.baseRent.amount
+    ),
+    FieldSpec(
+        name='x_base_rent_vat_value',
+        ttype='float',
+        label=_t('Base Rent Vat Value', 'Base Rent Vat Value'),
+        help=_t('the vat value in currency', 'the vat value in currency'),
+        # source: data.prices.rent.baseRent.vatValue
+    ),
+    FieldSpec(
+        name='x_base_rent_vat_percent',
+        ttype='float',
+        label=_t('Base Rent Vat Percent', 'Base Rent Vat Percent'),
+        help=_t('the vat value in percent', 'the vat value in percent'),
+        # source: data.prices.rent.baseRent.vatPercent
+    ),
+    FieldSpec(
+        name='x_base_rent_is_vat_included',
+        ttype='boolean',
+        label=_t('Base Rent Is Vat Included', 'Base Rent Is Vat Included'),
+        help=_t('vat is included in the price', 'vat is included in the price'),
+        # source: data.prices.rent.baseRent.isVatIncluded
+    ),
+    FieldSpec(
+        name='x_base_rent_price_information',
+        ttype='selection',
+        label=_t('Base Rent Price Information', 'Base Rent Price Information'),
+        help=_t('- PRICE_ON_DEMAND: specific flag for displaying this price on the portal/website. If PRICE_ON_DEMAND is chosen, the price MUST NOT be shown! It may only be used as search price! - BASIS_FOR_NEGOTIATION: the price is not fixed, it is negotiable. If the price is FIXED, priceInformation should not be sent.', '- PRICE_ON_DEMAND: specific flag for displaying this price on the portal/website. If PRICE_ON_DEMAND is chosen, the price MUST NOT be shown! It may only be used as search price! - BASIS_FOR_NEGOTIATION: the price is not fixed, it is negotiable. If the price is FIXED, priceInformation should not be sent.'),
+        selection=(
+        SelectionOption('PRICE_ON_DEMAND', _t('Price On Demand', 'Price On Demand'), 0),
+        SelectionOption('BASIS_FOR_NEGOTIATION', _t('Basis For Negotiation', 'Basis For Negotiation'), 1),
+        ),
+        # source: data.prices.rent.baseRent.priceInformation
+    ),
+    FieldSpec(
+        name='x_min_rent_amount',
+        ttype='float',
+        label=_t('Min Rent Amount', 'Min Rent Amount'),
+        help=_t('amount of the select priceType', 'amount of the select priceType'),
+        # source: data.prices.rent.minRent.amount
+    ),
+    FieldSpec(
+        name='x_min_rent_vat_value',
+        ttype='float',
+        label=_t('Min Rent Vat Value', 'Min Rent Vat Value'),
+        help=_t('the vat value in currency', 'the vat value in currency'),
+        # source: data.prices.rent.minRent.vatValue
+    ),
+    FieldSpec(
+        name='x_min_rent_vat_percent',
+        ttype='float',
+        label=_t('Min Rent Vat Percent', 'Min Rent Vat Percent'),
+        help=_t('the vat value in percent', 'the vat value in percent'),
+        # source: data.prices.rent.minRent.vatPercent
+    ),
+    FieldSpec(
+        name='x_min_rent_is_vat_included',
+        ttype='boolean',
+        label=_t('Min Rent Is Vat Included', 'Min Rent Is Vat Included'),
+        help=_t('vat is included in the price', 'vat is included in the price'),
+        # source: data.prices.rent.minRent.isVatIncluded
+    ),
+    FieldSpec(
+        name='x_min_rent_price_information',
+        ttype='selection',
+        label=_t('Min Rent Price Information', 'Min Rent Price Information'),
+        help=_t('- PRICE_ON_DEMAND: specific flag for displaying this price on the portal/website. If PRICE_ON_DEMAND is chosen, the price MUST NOT be shown! It may only be used as search price! - BASIS_FOR_NEGOTIATION: the price is not fixed, it is negotiable. If the price is FIXED, priceInformation should not be sent.', '- PRICE_ON_DEMAND: specific flag for displaying this price on the portal/website. If PRICE_ON_DEMAND is chosen, the price MUST NOT be shown! It may only be used as search price! - BASIS_FOR_NEGOTIATION: the price is not fixed, it is negotiable. If the price is FIXED, priceInformation should not be sent.'),
+        selection=(
+        SelectionOption('PRICE_ON_DEMAND', _t('Price On Demand', 'Price On Demand'), 0),
+        SelectionOption('BASIS_FOR_NEGOTIATION', _t('Basis For Negotiation', 'Basis For Negotiation'), 1),
+        ),
+        # source: data.prices.rent.minRent.priceInformation
+    ),
+    FieldSpec(
+        name='x_base_rent_per_year_amount',
+        ttype='float',
+        label=_t('Base Rent Per Year Amount', 'Base Rent Per Year Amount'),
+        help=_t('amount of the select priceType', 'amount of the select priceType'),
+        # source: data.prices.rent.baseRentPerYear.amount
+    ),
+    FieldSpec(
+        name='x_base_rent_per_year_vat_value',
+        ttype='float',
+        label=_t('Base Rent Per Year Vat Value', 'Base Rent Per Year Vat Value'),
+        help=_t('the vat value in currency', 'the vat value in currency'),
+        # source: data.prices.rent.baseRentPerYear.vatValue
+    ),
+    FieldSpec(
+        name='x_base_rent_per_year_vat_percent',
+        ttype='float',
+        label=_t('Base Rent Per Year Vat Percent', 'Base Rent Per Year Vat Percent'),
+        help=_t('the vat value in percent', 'the vat value in percent'),
+        # source: data.prices.rent.baseRentPerYear.vatPercent
+    ),
+    FieldSpec(
+        name='x_base_rent_per_year_is_vat_included',
+        ttype='boolean',
+        label=_t('Base Rent Per Year Is Vat Included', 'Base Rent Per Year Is Vat Included'),
+        help=_t('vat is included in the price', 'vat is included in the price'),
+        # source: data.prices.rent.baseRentPerYear.isVatIncluded
+    ),
+    FieldSpec(
+        name='x_base_rent_per_year_price_information',
+        ttype='selection',
+        label=_t('Base Rent Per Year Price Information', 'Base Rent Per Year Price Information'),
+        help=_t('- PRICE_ON_DEMAND: specific flag for displaying this price on the portal/website. If PRICE_ON_DEMAND is chosen, the price MUST NOT be shown! It may only be used as search price! - BASIS_FOR_NEGOTIATION: the price is not fixed, it is negotiable. If the price is FIXED, priceInformation should not be sent.', '- PRICE_ON_DEMAND: specific flag for displaying this price on the portal/website. If PRICE_ON_DEMAND is chosen, the price MUST NOT be shown! It may only be used as search price! - BASIS_FOR_NEGOTIATION: the price is not fixed, it is negotiable. If the price is FIXED, priceInformation should not be sent.'),
+        selection=(
+        SelectionOption('PRICE_ON_DEMAND', _t('Price On Demand', 'Price On Demand'), 0),
+        SelectionOption('BASIS_FOR_NEGOTIATION', _t('Basis For Negotiation', 'Basis For Negotiation'), 1),
+        ),
+        # source: data.prices.rent.baseRentPerYear.priceInformation
+    ),
+    FieldSpec(
+        name='x_total_rent_amount',
+        ttype='float',
+        label=_t('Total Rent Amount', 'Total Rent Amount'),
+        help=_t('amount of the select priceType', 'amount of the select priceType'),
+        # source: data.prices.rent.totalRent.amount
+    ),
+    FieldSpec(
+        name='x_total_rent_vat_value',
+        ttype='float',
+        label=_t('Total Rent Vat Value', 'Total Rent Vat Value'),
+        help=_t('the vat value in currency', 'the vat value in currency'),
+        # source: data.prices.rent.totalRent.vatValue
+    ),
+    FieldSpec(
+        name='x_total_rent_vat_percent',
+        ttype='float',
+        label=_t('Total Rent Vat Percent', 'Total Rent Vat Percent'),
+        help=_t('the vat value in percent', 'the vat value in percent'),
+        # source: data.prices.rent.totalRent.vatPercent
+    ),
+    FieldSpec(
+        name='x_total_rent_is_vat_included',
+        ttype='boolean',
+        label=_t('Total Rent Is Vat Included', 'Total Rent Is Vat Included'),
+        help=_t('vat is included in the price', 'vat is included in the price'),
+        # source: data.prices.rent.totalRent.isVatIncluded
+    ),
+    FieldSpec(
+        name='x_total_rent_price_information',
+        ttype='selection',
+        label=_t('Total Rent Price Information', 'Total Rent Price Information'),
+        help=_t('- PRICE_ON_DEMAND: specific flag for displaying this price on the portal/website. If PRICE_ON_DEMAND is chosen, the price MUST NOT be shown! It may only be used as search price! - BASIS_FOR_NEGOTIATION: the price is not fixed, it is negotiable. If the price is FIXED, priceInformation should not be sent.', '- PRICE_ON_DEMAND: specific flag for displaying this price on the portal/website. If PRICE_ON_DEMAND is chosen, the price MUST NOT be shown! It may only be used as search price! - BASIS_FOR_NEGOTIATION: the price is not fixed, it is negotiable. If the price is FIXED, priceInformation should not be sent.'),
+        selection=(
+        SelectionOption('PRICE_ON_DEMAND', _t('Price On Demand', 'Price On Demand'), 0),
+        SelectionOption('BASIS_FOR_NEGOTIATION', _t('Basis For Negotiation', 'Basis For Negotiation'), 1),
+        ),
+        # source: data.prices.rent.totalRent.priceInformation
+    ),
+    FieldSpec(
+        name='x_lease_amount',
+        ttype='float',
+        label=_t('Lease Amount', 'Lease Amount'),
+        help=_t('amount of the select priceType', 'amount of the select priceType'),
+        # source: data.prices.rent.lease.amount
+    ),
+    FieldSpec(
+        name='x_lease_vat_value',
+        ttype='float',
+        label=_t('Lease Vat Value', 'Lease Vat Value'),
+        help=_t('the vat value in currency', 'the vat value in currency'),
+        # source: data.prices.rent.lease.vatValue
+    ),
+    FieldSpec(
+        name='x_lease_vat_percent',
+        ttype='float',
+        label=_t('Lease Vat Percent', 'Lease Vat Percent'),
+        help=_t('the vat value in percent', 'the vat value in percent'),
+        # source: data.prices.rent.lease.vatPercent
+    ),
+    FieldSpec(
+        name='x_lease_is_vat_included',
+        ttype='boolean',
+        label=_t('Lease Is Vat Included', 'Lease Is Vat Included'),
+        help=_t('vat is included in the price', 'vat is included in the price'),
+        # source: data.prices.rent.lease.isVatIncluded
+    ),
+    FieldSpec(
+        name='x_lease_price_information',
+        ttype='selection',
+        label=_t('Lease Price Information', 'Lease Price Information'),
+        help=_t('- PRICE_ON_DEMAND: specific flag for displaying this price on the portal/website. If PRICE_ON_DEMAND is chosen, the price MUST NOT be shown! It may only be used as search price! - BASIS_FOR_NEGOTIATION: the price is not fixed, it is negotiable. If the price is FIXED, priceInformation should not be sent.', '- PRICE_ON_DEMAND: specific flag for displaying this price on the portal/website. If PRICE_ON_DEMAND is chosen, the price MUST NOT be shown! It may only be used as search price! - BASIS_FOR_NEGOTIATION: the price is not fixed, it is negotiable. If the price is FIXED, priceInformation should not be sent.'),
+        selection=(
+        SelectionOption('PRICE_ON_DEMAND', _t('Price On Demand', 'Price On Demand'), 0),
+        SelectionOption('BASIS_FOR_NEGOTIATION', _t('Basis For Negotiation', 'Basis For Negotiation'), 1),
+        ),
+        # source: data.prices.rent.lease.priceInformation
+    ),
+    FieldSpec(
+        name='x_rent_operating_costs_amount',
+        ttype='float',
+        label=_t('Rent Operating Costs Amount', 'Rent Operating Costs Amount'),
+        help=_t('amount of the select priceType', 'amount of the select priceType'),
+        # source: data.prices.rent.operatingCosts.amount
+    ),
+    FieldSpec(
+        name='x_rent_operating_costs_vat_value',
+        ttype='float',
+        label=_t('Rent Operating Costs Vat Value', 'Rent Operating Costs Vat Value'),
+        help=_t('the vat value in currency', 'the vat value in currency'),
+        # source: data.prices.rent.operatingCosts.vatValue
+    ),
+    FieldSpec(
+        name='x_rent_operating_costs_vat_percent',
+        ttype='float',
+        label=_t('Rent Operating Costs Vat Percent', 'Rent Operating Costs Vat Percent'),
+        help=_t('the vat value in percent', 'the vat value in percent'),
+        # source: data.prices.rent.operatingCosts.vatPercent
+    ),
+    FieldSpec(
+        name='x_rent_operating_costs_is_vat_included',
+        ttype='boolean',
+        label=_t('Rent Operating Costs Is Vat Included', 'Rent Operating Costs Is Vat Included'),
+        help=_t('vat is included in the price', 'vat is included in the price'),
+        # source: data.prices.rent.operatingCosts.isVatIncluded
+    ),
+    FieldSpec(
+        name='x_rent_operating_costs_price_information',
+        ttype='selection',
+        label=_t('Rent Operating Costs Price Information', 'Rent Operating Costs Price Information'),
+        help=_t('- PRICE_ON_DEMAND: specific flag for displaying this price on the portal/website. If PRICE_ON_DEMAND is chosen, the price MUST NOT be shown! It may only be used as search price! - BASIS_FOR_NEGOTIATION: the price is not fixed, it is negotiable. If the price is FIXED, priceInformation should not be sent.', '- PRICE_ON_DEMAND: specific flag for displaying this price on the portal/website. If PRICE_ON_DEMAND is chosen, the price MUST NOT be shown! It may only be used as search price! - BASIS_FOR_NEGOTIATION: the price is not fixed, it is negotiable. If the price is FIXED, priceInformation should not be sent.'),
+        selection=(
+        SelectionOption('PRICE_ON_DEMAND', _t('Price On Demand', 'Price On Demand'), 0),
+        SelectionOption('BASIS_FOR_NEGOTIATION', _t('Basis For Negotiation', 'Basis For Negotiation'), 1),
+        ),
+        # source: data.prices.rent.operatingCosts.priceInformation
+    ),
+    FieldSpec(
+        name='x_rent_operating_costs_accounting',
+        ttype='selection',
+        label=_t('Rent Operating Costs Accounting', 'Rent Operating Costs Accounting'),
+        help=_t('How often the costs are paid and how: - FIXED: fixed amount paid each time unit - REAL_USAGE: amount calculated on real usage paid each time unit - ADJUSTMENT: fixed amount paid each time unit and regular (yearly?) adjustment based on real usage', 'How often the costs are paid and how: - FIXED: fixed amount paid each time unit - REAL_USAGE: amount calculated on real usage paid each time unit - ADJUSTMENT: fixed amount paid each time unit and regular (yearly?) adjustment based on real usage'),
+        selection=(
+        SelectionOption('FIXED', _t('Fixed', 'Fixed'), 0),
+        SelectionOption('REAL_USAGE', _t('Real Usage', 'Real Usage'), 1),
+        SelectionOption('ADJUSTMENT', _t('Adjustment', 'Adjustment'), 2),
+        ),
+        # source: data.prices.rent.operatingCosts.accounting
+    ),
+    FieldSpec(
+        name='x_heating_costs_amount',
+        ttype='float',
+        label=_t('Heating Costs Amount', 'Heating Costs Amount'),
+        help=_t('amount of the select priceType', 'amount of the select priceType'),
+        # source: data.prices.rent.heatingCosts.amount
+    ),
+    FieldSpec(
+        name='x_heating_costs_vat_value',
+        ttype='float',
+        label=_t('Heating Costs Vat Value', 'Heating Costs Vat Value'),
+        help=_t('the vat value in currency', 'the vat value in currency'),
+        # source: data.prices.rent.heatingCosts.vatValue
+    ),
+    FieldSpec(
+        name='x_heating_costs_vat_percent',
+        ttype='float',
+        label=_t('Heating Costs Vat Percent', 'Heating Costs Vat Percent'),
+        help=_t('the vat value in percent', 'the vat value in percent'),
+        # source: data.prices.rent.heatingCosts.vatPercent
+    ),
+    FieldSpec(
+        name='x_heating_costs_is_vat_included',
+        ttype='boolean',
+        label=_t('Heating Costs Is Vat Included', 'Heating Costs Is Vat Included'),
+        help=_t('vat is included in the price', 'vat is included in the price'),
+        # source: data.prices.rent.heatingCosts.isVatIncluded
+    ),
+    FieldSpec(
+        name='x_heating_costs_price_information',
+        ttype='selection',
+        label=_t('Heating Costs Price Information', 'Heating Costs Price Information'),
+        help=_t('- PRICE_ON_DEMAND: specific flag for displaying this price on the portal/website. If PRICE_ON_DEMAND is chosen, the price MUST NOT be shown! It may only be used as search price! - BASIS_FOR_NEGOTIATION: the price is not fixed, it is negotiable. If the price is FIXED, priceInformation should not be sent.', '- PRICE_ON_DEMAND: specific flag for displaying this price on the portal/website. If PRICE_ON_DEMAND is chosen, the price MUST NOT be shown! It may only be used as search price! - BASIS_FOR_NEGOTIATION: the price is not fixed, it is negotiable. If the price is FIXED, priceInformation should not be sent.'),
+        selection=(
+        SelectionOption('PRICE_ON_DEMAND', _t('Price On Demand', 'Price On Demand'), 0),
+        SelectionOption('BASIS_FOR_NEGOTIATION', _t('Basis For Negotiation', 'Basis For Negotiation'), 1),
+        ),
+        # source: data.prices.rent.heatingCosts.priceInformation
+    ),
+    FieldSpec(
+        name='x_heating_costs_accounting',
+        ttype='selection',
+        label=_t('Heating Costs Accounting', 'Heating Costs Accounting'),
+        help=_t('How often the costs are paid and how: - FIXED: fixed amount paid each time unit - REAL_USAGE: amount calculated on real usage paid each time unit - ADJUSTMENT: fixed amount paid each time unit and regular (yearly?) adjustment based on real usage', 'How often the costs are paid and how: - FIXED: fixed amount paid each time unit - REAL_USAGE: amount calculated on real usage paid each time unit - ADJUSTMENT: fixed amount paid each time unit and regular (yearly?) adjustment based on real usage'),
+        selection=(
+        SelectionOption('FIXED', _t('Fixed', 'Fixed'), 0),
+        SelectionOption('REAL_USAGE', _t('Real Usage', 'Real Usage'), 1),
+        SelectionOption('ADJUSTMENT', _t('Adjustment', 'Adjustment'), 2),
+        ),
+        # source: data.prices.rent.heatingCosts.accounting
     ),
     FieldSpec(
         name='x_is_heating_included_in_o_c',
@@ -3481,9 +4062,87 @@ DERIVED_PRICES_FIELDS: tuple[FieldSpec, ...] = (
         # source: data.prices.rent.isHeatingIncludedInTR
     ),
     FieldSpec(
+        name='x_rent_price_per_sq_unit_amount',
+        ttype='float',
+        label=_t('Rent Price Per Sq Unit Amount', 'Rent Price Per Sq Unit Amount'),
+        help=_t('amount of the select priceType', 'amount of the select priceType'),
+        # source: data.prices.rent.pricePerSqUnit.amount
+    ),
+    FieldSpec(
+        name='x_rent_price_per_sq_unit_vat_value',
+        ttype='float',
+        label=_t('Rent Price Per Sq Unit Vat Value', 'Rent Price Per Sq Unit Vat Value'),
+        help=_t('the vat value in currency', 'the vat value in currency'),
+        # source: data.prices.rent.pricePerSqUnit.vatValue
+    ),
+    FieldSpec(
+        name='x_rent_price_per_sq_unit_vat_percent',
+        ttype='float',
+        label=_t('Rent Price Per Sq Unit Vat Percent', 'Rent Price Per Sq Unit Vat Percent'),
+        help=_t('the vat value in percent', 'the vat value in percent'),
+        # source: data.prices.rent.pricePerSqUnit.vatPercent
+    ),
+    FieldSpec(
+        name='x_rent_price_per_sq_unit_is_vat_included',
+        ttype='boolean',
+        label=_t('Rent Price Per Sq Unit Is Vat Included', 'Rent Price Per Sq Unit Is Vat Included'),
+        help=_t('vat is included in the price', 'vat is included in the price'),
+        # source: data.prices.rent.pricePerSqUnit.isVatIncluded
+    ),
+    FieldSpec(
+        name='x_rent_price_per_sq_unit_price_information',
+        ttype='selection',
+        label=_t('Rent Price Per Sq Unit Price Information', 'Rent Price Per Sq Unit Price Information'),
+        help=_t('- PRICE_ON_DEMAND: specific flag for displaying this price on the portal/website. If PRICE_ON_DEMAND is chosen, the price MUST NOT be shown! It may only be used as search price! - BASIS_FOR_NEGOTIATION: the price is not fixed, it is negotiable. If the price is FIXED, priceInformation should not be sent.', '- PRICE_ON_DEMAND: specific flag for displaying this price on the portal/website. If PRICE_ON_DEMAND is chosen, the price MUST NOT be shown! It may only be used as search price! - BASIS_FOR_NEGOTIATION: the price is not fixed, it is negotiable. If the price is FIXED, priceInformation should not be sent.'),
+        selection=(
+        SelectionOption('PRICE_ON_DEMAND', _t('Price On Demand', 'Price On Demand'), 0),
+        SelectionOption('BASIS_FOR_NEGOTIATION', _t('Basis For Negotiation', 'Basis For Negotiation'), 1),
+        ),
+        # source: data.prices.rent.pricePerSqUnit.priceInformation
+    ),
+    FieldSpec(
+        name='x_price_per_sq_unit_per_year_amount',
+        ttype='float',
+        label=_t('Price Per Sq Unit Per Year Amount', 'Price Per Sq Unit Per Year Amount'),
+        help=_t('amount of the select priceType', 'amount of the select priceType'),
+        # source: data.prices.rent.pricePerSqUnitPerYear.amount
+    ),
+    FieldSpec(
+        name='x_price_per_sq_unit_per_year_vat_value',
+        ttype='float',
+        label=_t('Price Per Sq Unit Per Year Vat Value', 'Price Per Sq Unit Per Year Vat Value'),
+        help=_t('the vat value in currency', 'the vat value in currency'),
+        # source: data.prices.rent.pricePerSqUnitPerYear.vatValue
+    ),
+    FieldSpec(
+        name='x_price_per_sq_unit_per_year_vat_percent',
+        ttype='float',
+        label=_t('Price Per Sq Unit Per Year Vat Percent', 'Price Per Sq Unit Per Year Vat Percent'),
+        help=_t('the vat value in percent', 'the vat value in percent'),
+        # source: data.prices.rent.pricePerSqUnitPerYear.vatPercent
+    ),
+    FieldSpec(
+        name='x_price_per_sq_unit_per_year_is_vat_included',
+        ttype='boolean',
+        label=_t('Price Per Sq Unit Per Year Is Vat Included', 'Price Per Sq Unit Per Year Is Vat Included'),
+        help=_t('vat is included in the price', 'vat is included in the price'),
+        # source: data.prices.rent.pricePerSqUnitPerYear.isVatIncluded
+    ),
+    FieldSpec(
+        name='x_price_per_sq_unit_per_year_price_information',
+        ttype='selection',
+        label=_t('Price Per Sq Unit Per Year Price Information', 'Price Per Sq Unit Per Year Price Information'),
+        help=_t('- PRICE_ON_DEMAND: specific flag for displaying this price on the portal/website. If PRICE_ON_DEMAND is chosen, the price MUST NOT be shown! It may only be used as search price! - BASIS_FOR_NEGOTIATION: the price is not fixed, it is negotiable. If the price is FIXED, priceInformation should not be sent.', '- PRICE_ON_DEMAND: specific flag for displaying this price on the portal/website. If PRICE_ON_DEMAND is chosen, the price MUST NOT be shown! It may only be used as search price! - BASIS_FOR_NEGOTIATION: the price is not fixed, it is negotiable. If the price is FIXED, priceInformation should not be sent.'),
+        selection=(
+        SelectionOption('PRICE_ON_DEMAND', _t('Price On Demand', 'Price On Demand'), 0),
+        SelectionOption('BASIS_FOR_NEGOTIATION', _t('Basis For Negotiation', 'Basis For Negotiation'), 1),
+        ),
+        # source: data.prices.rent.pricePerSqUnitPerYear.priceInformation
+    ),
+    FieldSpec(
         name='x_rent_price_time_unit',
         ttype='selection',
-        label=_t('Price Time Unit', 'Price Time Unit'),
+        label=_t('Rent Price Time Unit', 'Rent Price Time Unit'),
         help=_t('time unit for the rent prices. Unless specified differently, Default is MONTH!', 'time unit for the rent prices. Unless specified differently, Default is MONTH!'),
         selection=(
         SelectionOption('DAY', _t('Day', 'Day'), 0),
@@ -3501,6 +4160,155 @@ DERIVED_PRICES_FIELDS: tuple[FieldSpec, ...] = (
         # source: data.prices.rent.isParkingPriceIncluded
     ),
     FieldSpec(
+        name='x_parking_rent_amount',
+        ttype='float',
+        label=_t('Parking Rent Amount', 'Parking Rent Amount'),
+        help=_t('amount of the select priceType', 'amount of the select priceType'),
+        # source: data.prices.rent.parkingRent.amount
+    ),
+    FieldSpec(
+        name='x_parking_rent_vat_value',
+        ttype='float',
+        label=_t('Parking Rent Vat Value', 'Parking Rent Vat Value'),
+        help=_t('the vat value in currency', 'the vat value in currency'),
+        # source: data.prices.rent.parkingRent.vatValue
+    ),
+    FieldSpec(
+        name='x_parking_rent_vat_percent',
+        ttype='float',
+        label=_t('Parking Rent Vat Percent', 'Parking Rent Vat Percent'),
+        help=_t('the vat value in percent', 'the vat value in percent'),
+        # source: data.prices.rent.parkingRent.vatPercent
+    ),
+    FieldSpec(
+        name='x_parking_rent_is_vat_included',
+        ttype='boolean',
+        label=_t('Parking Rent Is Vat Included', 'Parking Rent Is Vat Included'),
+        help=_t('vat is included in the price', 'vat is included in the price'),
+        # source: data.prices.rent.parkingRent.isVatIncluded
+    ),
+    FieldSpec(
+        name='x_parking_rent_price_information',
+        ttype='selection',
+        label=_t('Parking Rent Price Information', 'Parking Rent Price Information'),
+        help=_t('- PRICE_ON_DEMAND: specific flag for displaying this price on the portal/website. If PRICE_ON_DEMAND is chosen, the price MUST NOT be shown! It may only be used as search price! - BASIS_FOR_NEGOTIATION: the price is not fixed, it is negotiable. If the price is FIXED, priceInformation should not be sent.', '- PRICE_ON_DEMAND: specific flag for displaying this price on the portal/website. If PRICE_ON_DEMAND is chosen, the price MUST NOT be shown! It may only be used as search price! - BASIS_FOR_NEGOTIATION: the price is not fixed, it is negotiable. If the price is FIXED, priceInformation should not be sent.'),
+        selection=(
+        SelectionOption('PRICE_ON_DEMAND', _t('Price On Demand', 'Price On Demand'), 0),
+        SelectionOption('BASIS_FOR_NEGOTIATION', _t('Basis For Negotiation', 'Basis For Negotiation'), 1),
+        ),
+        # source: data.prices.rent.parkingRent.priceInformation
+    ),
+    FieldSpec(
+        name='x_parking_rent_parking_style',
+        ttype='selection',
+        label=_t('Parking Rent Parking Style', 'Parking Rent Parking Style'),
+        help=_t('if the property has an additional garage/parking space then you can specify the parking style in details here. A parking lot can only be described by one (the most appropriate) item, not by several. Descriptions for the enums above: - OUTSIDE: a parking space that is outside, not in a garage - STREET_PARKING: a parking space along the street - CARPORT: a shelter for vehicles that is open-sided and usually attached to a house - GARAGE: a building for parking one vehicle usually with a vertical rolling door - DOUBLE_GARAGE: like a garage but for two vehicles - DUPLEX: double parking on one parki…', 'if the property has an additional garage/parking space then you can specify the parking style in details here. A parking lot can only be described by one (the most appropriate) item, not by several. Descriptions for the enums above: - OUTSIDE: a parking space that is outside, not in a garage - STREET_PARKING: a parking space along the street - CARPORT: a shelter for vehicles that is open-sided and usually attached to a house - GARAGE: a building for parking one vehicle usually with a vertical rolling door - DOUBLE_GARAGE: like a garage but for two vehicles - DUPLEX: double parking on one parki…'),
+        selection=(
+        SelectionOption('OUTSIDE', _t('Outside', 'Outside'), 0),
+        SelectionOption('STREET_PARKING', _t('Street Parking', 'Street Parking'), 1),
+        SelectionOption('CARPORT', _t('Carport', 'Carport'), 2),
+        SelectionOption('GARAGE', _t('Garage', 'Garage'), 3),
+        SelectionOption('DOUBLE_GARAGE', _t('Double Garage', 'Double Garage'), 4),
+        SelectionOption('DUPLEX', _t('Duplex', 'Duplex'), 5),
+        SelectionOption('GARAGE_AREA', _t('Garage Area', 'Garage Area'), 6),
+        SelectionOption('PARKING_AREA', _t('Parking Area', 'Parking Area'), 7),
+        SelectionOption('CAR_PARK', _t('Car Park', 'Car Park'), 8),
+        SelectionOption('UNDERGROUND', _t('Underground', 'Underground'), 9),
+        SelectionOption('BOAT_DOCK', _t('Boat Dock', 'Boat Dock'), 10),
+        ),
+        # source: data.prices.rent.parkingRent.parkingStyle
+    ),
+    FieldSpec(
+        name='x_deposit_note_en',
+        ttype='text',
+        label=_t('Deposit Note En', 'Deposit Note En'),
+        # source: data.prices.rent.depositNote.en
+    ),
+    FieldSpec(
+        name='x_deposit_note_fr',
+        ttype='text',
+        label=_t('Deposit Note Fr', 'Deposit Note Fr'),
+        # source: data.prices.rent.depositNote.fr
+    ),
+    FieldSpec(
+        name='x_lease_right_amount',
+        ttype='float',
+        label=_t('Lease Right Amount', 'Lease Right Amount'),
+        help=_t('amount of the select priceType', 'amount of the select priceType'),
+        # source: data.prices.rent.countrySpecific.fr.leaseRight.amount
+    ),
+    FieldSpec(
+        name='x_lease_right_vat_value',
+        ttype='float',
+        label=_t('Lease Right Vat Value', 'Lease Right Vat Value'),
+        help=_t('the vat value in currency', 'the vat value in currency'),
+        # source: data.prices.rent.countrySpecific.fr.leaseRight.vatValue
+    ),
+    FieldSpec(
+        name='x_lease_right_vat_percent',
+        ttype='float',
+        label=_t('Lease Right Vat Percent', 'Lease Right Vat Percent'),
+        help=_t('the vat value in percent', 'the vat value in percent'),
+        # source: data.prices.rent.countrySpecific.fr.leaseRight.vatPercent
+    ),
+    FieldSpec(
+        name='x_lease_right_is_vat_included',
+        ttype='boolean',
+        label=_t('Lease Right Is Vat Included', 'Lease Right Is Vat Included'),
+        help=_t('vat is included in the price', 'vat is included in the price'),
+        # source: data.prices.rent.countrySpecific.fr.leaseRight.isVatIncluded
+    ),
+    FieldSpec(
+        name='x_lease_right_price_information',
+        ttype='selection',
+        label=_t('Lease Right Price Information', 'Lease Right Price Information'),
+        help=_t('- PRICE_ON_DEMAND: specific flag for displaying this price on the portal/website. If PRICE_ON_DEMAND is chosen, the price MUST NOT be shown! It may only be used as search price! - BASIS_FOR_NEGOTIATION: the price is not fixed, it is negotiable. If the price is FIXED, priceInformation should not be sent.', '- PRICE_ON_DEMAND: specific flag for displaying this price on the portal/website. If PRICE_ON_DEMAND is chosen, the price MUST NOT be shown! It may only be used as search price! - BASIS_FOR_NEGOTIATION: the price is not fixed, it is negotiable. If the price is FIXED, priceInformation should not be sent.'),
+        selection=(
+        SelectionOption('PRICE_ON_DEMAND', _t('Price On Demand', 'Price On Demand'), 0),
+        SelectionOption('BASIS_FOR_NEGOTIATION', _t('Basis For Negotiation', 'Basis For Negotiation'), 1),
+        ),
+        # source: data.prices.rent.countrySpecific.fr.leaseRight.priceInformation
+    ),
+    FieldSpec(
+        name='x_access_price_amount',
+        ttype='float',
+        label=_t('Access Price Amount', 'Access Price Amount'),
+        help=_t('amount of the select priceType', 'amount of the select priceType'),
+        # source: data.prices.rent.countrySpecific.fr.accessPrice.amount
+    ),
+    FieldSpec(
+        name='x_access_price_vat_value',
+        ttype='float',
+        label=_t('Access Price Vat Value', 'Access Price Vat Value'),
+        help=_t('the vat value in currency', 'the vat value in currency'),
+        # source: data.prices.rent.countrySpecific.fr.accessPrice.vatValue
+    ),
+    FieldSpec(
+        name='x_access_price_vat_percent',
+        ttype='float',
+        label=_t('Access Price Vat Percent', 'Access Price Vat Percent'),
+        help=_t('the vat value in percent', 'the vat value in percent'),
+        # source: data.prices.rent.countrySpecific.fr.accessPrice.vatPercent
+    ),
+    FieldSpec(
+        name='x_access_price_is_vat_included',
+        ttype='boolean',
+        label=_t('Access Price Is Vat Included', 'Access Price Is Vat Included'),
+        help=_t('vat is included in the price', 'vat is included in the price'),
+        # source: data.prices.rent.countrySpecific.fr.accessPrice.isVatIncluded
+    ),
+    FieldSpec(
+        name='x_access_price_price_information',
+        ttype='selection',
+        label=_t('Access Price Price Information', 'Access Price Price Information'),
+        help=_t('- PRICE_ON_DEMAND: specific flag for displaying this price on the portal/website. If PRICE_ON_DEMAND is chosen, the price MUST NOT be shown! It may only be used as search price! - BASIS_FOR_NEGOTIATION: the price is not fixed, it is negotiable. If the price is FIXED, priceInformation should not be sent.', '- PRICE_ON_DEMAND: specific flag for displaying this price on the portal/website. If PRICE_ON_DEMAND is chosen, the price MUST NOT be shown! It may only be used as search price! - BASIS_FOR_NEGOTIATION: the price is not fixed, it is negotiable. If the price is FIXED, priceInformation should not be sent.'),
+        selection=(
+        SelectionOption('PRICE_ON_DEMAND', _t('Price On Demand', 'Price On Demand'), 0),
+        SelectionOption('BASIS_FOR_NEGOTIATION', _t('Basis For Negotiation', 'Basis For Negotiation'), 1),
+        ),
+        # source: data.prices.rent.countrySpecific.fr.accessPrice.priceInformation
+    ),
+    FieldSpec(
         name='x_max_regulated_rent',
         ttype='float',
         label=_t('Max Regulated Rent', 'Max Regulated Rent'),
@@ -3515,107 +4323,142 @@ DERIVED_PRICES_FIELDS: tuple[FieldSpec, ...] = (
         # source: data.prices.rent.countrySpecific.fr.overRegulatedRent
     ),
     FieldSpec(
-        name='x_rent_country_specific_at_heating_costs_net_amount',
+        name='x_auction_proceeds_amount',
         ttype='float',
-        label=_t('Amount', 'Amount'),
-        help=_t('heatingCosts excl. vat (if 0, no heatingCosts are included in totalRent); de: Heizkosten exkl. USt (wenn 0, dann keine HK in Warmmiete enthalten)', 'heatingCosts excl. vat (if 0, no heatingCosts are included in totalRent); de: Heizkosten exkl. USt (wenn 0, dann keine HK in Warmmiete enthalten)'),
-        # source: data.prices.rent.countrySpecific.at.heatingCostsNet.amount
+        label=_t('Auction Proceeds Amount', 'Auction Proceeds Amount'),
+        help=_t('amount of the select priceType', 'amount of the select priceType'),
+        # source: data.prices.compulsoryAuction.auctionProceeds.amount
     ),
     FieldSpec(
-        name='x_rent_country_specific_at_misc_costs_net_amount',
+        name='x_auction_proceeds_vat_value',
         ttype='float',
-        label=_t('Amount', 'Amount'),
-        help=_t('overallLoadGross minus rentNet, operatingCostsNet, heatingCostsNet, overallLoadVat de: SonstigeKostenNetto; GesamtbelastungBrutto abzgl. SummeMieteNetto, BetriebskostenNetto, HeizkostenNetto und GesamtbelastungUSt', 'overallLoadGross minus rentNet, operatingCostsNet, heatingCostsNet, overallLoadVat de: SonstigeKostenNetto; GesamtbelastungBrutto abzgl. SummeMieteNetto, BetriebskostenNetto, HeizkostenNetto und GesamtbelastungUSt'),
-        # source: data.prices.rent.countrySpecific.at.miscCostsNet.amount
+        label=_t('Auction Proceeds Vat Value', 'Auction Proceeds Vat Value'),
+        help=_t('the vat value in currency', 'the vat value in currency'),
+        # source: data.prices.compulsoryAuction.auctionProceeds.vatValue
     ),
     FieldSpec(
-        name='x_rent_country_specific_at_operating_costs_net_amount',
+        name='x_auction_proceeds_vat_percent',
         ttype='float',
-        label=_t('Amount', 'Amount'),
-        help=_t('operating costs excl. vat (as in the operating costs catalog); de: BetriebskostenNetto; Betriebskosten exkl. Ust (lt. BK-Katalog)', 'operating costs excl. vat (as in the operating costs catalog); de: BetriebskostenNetto; Betriebskosten exkl. Ust (lt. BK-Katalog)'),
-        # source: data.prices.rent.countrySpecific.at.operatingCostsNet.amount
+        label=_t('Auction Proceeds Vat Percent', 'Auction Proceeds Vat Percent'),
+        help=_t('the vat value in percent', 'the vat value in percent'),
+        # source: data.prices.compulsoryAuction.auctionProceeds.vatPercent
     ),
     FieldSpec(
-        name='x_overall_load_gross_amount',
+        name='x_auction_proceeds_is_vat_included',
+        ttype='boolean',
+        label=_t('Auction Proceeds Is Vat Included', 'Auction Proceeds Is Vat Included'),
+        help=_t('vat is included in the price', 'vat is included in the price'),
+        # source: data.prices.compulsoryAuction.auctionProceeds.isVatIncluded
+    ),
+    FieldSpec(
+        name='x_bidding_guarantee_amount',
         ttype='float',
-        label=_t('Amount', 'Amount'),
-        help=_t('overall rent / all-inclusive rent (incl. vat, additionalCosts, heatingCosts, other costs); de: GesamtbelastungBrutto; Gesamtbelastung (inkl. Ust, BK, HK, sonstige) / Pauschalmiete', 'overall rent / all-inclusive rent (incl. vat, additionalCosts, heatingCosts, other costs); de: GesamtbelastungBrutto; Gesamtbelastung (inkl. Ust, BK, HK, sonstige) / Pauschalmiete'),
-        # source: data.prices.rent.countrySpecific.at.overallLoadGross.amount
+        label=_t('Bidding Guarantee Amount', 'Bidding Guarantee Amount'),
+        help=_t('amount of the select priceType', 'amount of the select priceType'),
+        # source: data.prices.compulsoryAuction.biddingGuarantee.amount
     ),
     FieldSpec(
-        name='x_overall_load_vat',
+        name='x_bidding_guarantee_vat_value',
         ttype='float',
-        label=_t('Overall Load Vat', 'Overall Load Vat'),
-        help=_t('overall load of the vat de: GesamtbelastungUSt; summe mwst', 'overall load of the vat de: GesamtbelastungUSt; summe mwst'),
-        # source: data.prices.rent.countrySpecific.at.overallLoadVat
+        label=_t('Bidding Guarantee Vat Value', 'Bidding Guarantee Vat Value'),
+        help=_t('the vat value in currency', 'the vat value in currency'),
+        # source: data.prices.compulsoryAuction.biddingGuarantee.vatValue
     ),
     FieldSpec(
-        name='x_overall_rent_gross_amount',
+        name='x_bidding_guarantee_vat_percent',
         ttype='float',
-        label=_t('Amount', 'Amount'),
-        help=_t('overallLoadGross minus heatingCostsGross de: GesamtMieteBrutto: (GesamtbelastungBrutto minus HeizkostenBrutto)', 'overallLoadGross minus heatingCostsGross de: GesamtMieteBrutto: (GesamtbelastungBrutto minus HeizkostenBrutto)'),
-        # source: data.prices.rent.countrySpecific.at.overallRentGross.amount
+        label=_t('Bidding Guarantee Vat Percent', 'Bidding Guarantee Vat Percent'),
+        help=_t('the vat value in percent', 'the vat value in percent'),
+        # source: data.prices.compulsoryAuction.biddingGuarantee.vatPercent
     ),
     FieldSpec(
-        name='x_rent_net_amount',
+        name='x_bidding_guarantee_is_vat_included',
+        ttype='boolean',
+        label=_t('Bidding Guarantee Is Vat Included', 'Bidding Guarantee Is Vat Included'),
+        help=_t('vat is included in the price', 'vat is included in the price'),
+        # source: data.prices.compulsoryAuction.biddingGuarantee.isVatIncluded
+    ),
+    FieldSpec(
+        name='x_market_value_amount',
         ttype='float',
-        label=_t('Amount', 'Amount'),
-        help=_t('rent excl. vat (excl. operatingCosts,heatingsCosts) incl. eg. rent for furniture; de: SummeMieteNetto / HauptmietzinsNetto; Miete exkl. MwSt (exkl.BK, HK) inkl. z.B.Möbelmiete', 'rent excl. vat (excl. operatingCosts,heatingsCosts) incl. eg. rent for furniture; de: SummeMieteNetto / HauptmietzinsNetto; Miete exkl. MwSt (exkl.BK, HK) inkl. z.B.Möbelmiete'),
-        # source: data.prices.rent.countrySpecific.at.rentNet.amount
+        label=_t('Market Value Amount', 'Market Value Amount'),
+        help=_t('amount of the select priceType', 'amount of the select priceType'),
+        # source: data.prices.compulsoryAuction.marketValue.amount
     ),
     FieldSpec(
-        name='x_auction_proceeds_price_information',
-        ttype='char',
-        label=_t('Price Information', 'Price Information'),
-        help=_t('DEPRECATED Tag for price information but no relevant here', 'DEPRECATED Tag for price information but no relevant here'),
-        # source: data.prices.compulsoryAuction.auctionProceeds.priceInformation
+        name='x_market_value_vat_value',
+        ttype='float',
+        label=_t('Market Value Vat Value', 'Market Value Vat Value'),
+        help=_t('the vat value in currency', 'the vat value in currency'),
+        # source: data.prices.compulsoryAuction.marketValue.vatValue
     ),
     FieldSpec(
-        name='x_bidding_guarantee_price_information',
-        ttype='char',
-        label=_t('Price Information', 'Price Information'),
-        help=_t('DEPRECATED Tag for price information but no relevant here', 'DEPRECATED Tag for price information but no relevant here'),
-        # source: data.prices.compulsoryAuction.biddingGuarantee.priceInformation
+        name='x_market_value_vat_percent',
+        ttype='float',
+        label=_t('Market Value Vat Percent', 'Market Value Vat Percent'),
+        help=_t('the vat value in percent', 'the vat value in percent'),
+        # source: data.prices.compulsoryAuction.marketValue.vatPercent
     ),
     FieldSpec(
-        name='x_market_value_price_information',
-        ttype='char',
-        label=_t('Price Information', 'Price Information'),
-        help=_t('DEPRECATED Tag for price information but no relevant here', 'DEPRECATED Tag for price information but no relevant here'),
-        # source: data.prices.compulsoryAuction.marketValue.priceInformation
+        name='x_market_value_is_vat_included',
+        ttype='boolean',
+        label=_t('Market Value Is Vat Included', 'Market Value Is Vat Included'),
+        help=_t('vat is included in the price', 'vat is included in the price'),
+        # source: data.prices.compulsoryAuction.marketValue.isVatIncluded
     ),
     FieldSpec(
-        name='x_minimum_bid_price_information',
-        ttype='char',
-        label=_t('Price Information', 'Price Information'),
-        help=_t('DEPRECATED Tag for price information but no relevant here', 'DEPRECATED Tag for price information but no relevant here'),
-        # source: data.prices.compulsoryAuction.minimumBid.priceInformation
+        name='x_minimum_bid_amount',
+        ttype='float',
+        label=_t('Minimum Bid Amount', 'Minimum Bid Amount'),
+        help=_t('amount of the select priceType', 'amount of the select priceType'),
+        # source: data.prices.compulsoryAuction.minimumBid.amount
+    ),
+    FieldSpec(
+        name='x_minimum_bid_vat_value',
+        ttype='float',
+        label=_t('Minimum Bid Vat Value', 'Minimum Bid Vat Value'),
+        help=_t('the vat value in currency', 'the vat value in currency'),
+        # source: data.prices.compulsoryAuction.minimumBid.vatValue
+    ),
+    FieldSpec(
+        name='x_minimum_bid_vat_percent',
+        ttype='float',
+        label=_t('Minimum Bid Vat Percent', 'Minimum Bid Vat Percent'),
+        help=_t('the vat value in percent', 'the vat value in percent'),
+        # source: data.prices.compulsoryAuction.minimumBid.vatPercent
+    ),
+    FieldSpec(
+        name='x_minimum_bid_is_vat_included',
+        ttype='boolean',
+        label=_t('Minimum Bid Is Vat Included', 'Minimum Bid Is Vat Included'),
+        help=_t('vat is included in the price', 'vat is included in the price'),
+        # source: data.prices.compulsoryAuction.minimumBid.isVatIncluded
     ),
     FieldSpec(
         name='x_min_price_amount',
         ttype='float',
-        label=_t('Amount', 'Amount'),
+        label=_t('Min Price Amount', 'Min Price Amount'),
         help=_t('this is the lower price limit. the buy price may be higher, but it must by no means be lower.', 'this is the lower price limit. the buy price may be higher, but it must by no means be lower.'),
         # source: data.prices.buyAuction.minPrice.amount
     ),
     FieldSpec(
-        name='x_vat_value',
+        name='x_min_price_vat_value',
         ttype='float',
-        label=_t('Vat Value', 'Vat Value'),
+        label=_t('Min Price Vat Value', 'Min Price Vat Value'),
         help=_t('the vat value in currency', 'the vat value in currency'),
         # source: data.prices.buyAuction.minPrice.vatValue
     ),
     FieldSpec(
-        name='x_vat_percent',
+        name='x_min_price_vat_percent',
         ttype='float',
-        label=_t('Vat Percent', 'Vat Percent'),
+        label=_t('Min Price Vat Percent', 'Min Price Vat Percent'),
         help=_t('the vat value in percent', 'the vat value in percent'),
         # source: data.prices.buyAuction.minPrice.vatPercent
     ),
     FieldSpec(
-        name='x_is_vat_included',
+        name='x_min_price_is_vat_included',
         ttype='boolean',
-        label=_t('Is Vat Included', 'Is Vat Included'),
+        label=_t('Min Price Is Vat Included', 'Min Price Is Vat Included'),
         help=_t('vat is included in the price', 'vat is included in the price'),
         # source: data.prices.buyAuction.minPrice.isVatIncluded
     ),
@@ -3634,63 +4477,32 @@ DERIVED_PRICES_FIELDS: tuple[FieldSpec, ...] = (
         # source: data.prices.buyAuction.endOfferPhase
     ),
     FieldSpec(
-        name='x_is_fee_included',
-        ttype='boolean',
-        label=_t('Is Fee Included', 'Is Fee Included'),
-        help=_t('is the fee included in the buy price', 'is the fee included in the buy price'),
-        # source: data.prices.brokerageFee.isFeeIncluded
-    ),
-    FieldSpec(
-        name='x_fee_for',
-        ttype='selection',
-        label=_t('Fee For', 'Fee For'),
-        help=_t('who pays the fee after a mediation (sale or rental) of a property by a real estate agent or broker. The buyer/ new tenant or the seller/ landlord of the property?', 'who pays the fee after a mediation (sale or rental) of a property by a real estate agent or broker. The buyer/ new tenant or the seller/ landlord of the property?'),
-        selection=(
-        SelectionOption('BUYER_OR_TENANT', _t('Buyer Or Tenant', 'Buyer Or Tenant'), 0),
-        SelectionOption('SELLER_OR_LANDLORD', _t('Seller Or Landlord', 'Seller Or Landlord'), 1),
-        SelectionOption('SHARED', _t('Shared', 'Shared'), 2),
-        ),
-        # source: data.prices.brokerageFee.feeFor
-    ),
-    FieldSpec(
-        name='x_fee_percentage',
+        name='x_brokerage_fee_amount',
         ttype='float',
-        label=_t('Fee Percentage', 'Fee Percentage'),
-        help=_t('The value of the agency fee in percentage', 'The value of the agency fee in percentage'),
-        # source: data.prices.brokerageFee.feePercentage
+        label=_t('Brokerage Fee Amount', 'Brokerage Fee Amount'),
+        help=_t('amount of the select priceType', 'amount of the select priceType'),
+        # source: data.prices.brokerageFee.amount
     ),
     FieldSpec(
-        name='x_has_fee',
-        ttype='selection',
-        label=_t('Has Fee', 'Has Fee'),
-        help=_t('will a brokerage fee be charged?', 'will a brokerage fee be charged?'),
-        selection=(
-        SelectionOption('YES', _t('Yes', 'Yes'), 0),
-        SelectionOption('NO', _t('No', 'No'), 1),
-        SelectionOption('NOT_APPLICABLE', _t('Not Applicable', 'Not Applicable'), 2),
-        ),
-        # source: data.prices.brokerageFee.hasFee
+        name='x_brokerage_fee_vat_value',
+        ttype='float',
+        label=_t('Brokerage Fee Vat Value', 'Brokerage Fee Vat Value'),
+        help=_t('the vat value in currency', 'the vat value in currency'),
+        # source: data.prices.brokerageFee.vatValue
     ),
     FieldSpec(
-        name='x_fee_schedule_link',
-        ttype='text',
-        label=_t('Fee Schedule Link', 'Fee Schedule Link'),
-        help=_t('URL of a document listing the fees of services provided by the real estate agency or broker. Mandatory information when applicable.', 'URL of a document listing the fees of services provided by the real estate agency or broker. Mandatory information when applicable.'),
-        # source: data.prices.brokerageFee.countrySpecific.fr.feeScheduleLink
+        name='x_brokerage_fee_vat_percent',
+        ttype='float',
+        label=_t('Brokerage Fee Vat Percent', 'Brokerage Fee Vat Percent'),
+        help=_t('the vat value in percent', 'the vat value in percent'),
+        # source: data.prices.brokerageFee.vatPercent
     ),
     FieldSpec(
-        name='x_inventory_fee',
-        ttype='char',
-        label=_t('Inventory Fee', 'Inventory Fee'),
-        help=_t('Fee amount of the inventory of the rented property', 'Fee amount of the inventory of the rented property'),
-        # source: data.prices.brokerageFee.countrySpecific.fr.inventoryFee
-    ),
-    FieldSpec(
-        name='x_brokerage_fee_price_information',
-        ttype='char',
-        label=_t('Price Information', 'Price Information'),
-        help=_t('DEPRECATED Tag for price information but no relevant here', 'DEPRECATED Tag for price information but no relevant here'),
-        # source: data.prices.brokerageFee.priceInformation
+        name='x_brokerage_fee_is_vat_included',
+        ttype='boolean',
+        label=_t('Brokerage Fee Is Vat Included', 'Brokerage Fee Is Vat Included'),
+        help=_t('vat is included in the price', 'vat is included in the price'),
+        # source: data.prices.brokerageFee.isVatIncluded
     ),
     FieldSpec(
         name='x_show_price',
@@ -3698,6 +4510,18 @@ DERIVED_PRICES_FIELDS: tuple[FieldSpec, ...] = (
         label=_t('Show Price', 'Show Price'),
         help=_t('general setting for displaying the price on the portal/ website', 'general setting for displaying the price on the portal/ website'),
         # source: data.prices.showPrice
+    ),
+    FieldSpec(
+        name='x_price_note_en',
+        ttype='text',
+        label=_t('Price Note En', 'Price Note En'),
+        # source: data.prices.priceNote.en
+    ),
+    FieldSpec(
+        name='x_price_note_fr',
+        ttype='text',
+        label=_t('Price Note Fr', 'Price Note Fr'),
+        # source: data.prices.priceNote.fr
     ),
     FieldSpec(
         name='x_tax_regime',
@@ -3732,20 +4556,6 @@ DERIVED_PRICES_FIELDS: tuple[FieldSpec, ...] = (
         SelectionOption('C', _t('C', 'C'), 4),
         ),
         # source: data.prices.countrySpecific.fr.taxReductionZone
-    ),
-    FieldSpec(
-        name='x_commercial_is_business_sold',
-        ttype='boolean',
-        label=_t('Is Business Sold', 'Is Business Sold'),
-        help=_t('Is the business run inside the property sold ?', 'Is the business run inside the property sold ?'),
-        # source: data.prices.countrySpecific.be.commercial.isBusinessSold
-    ),
-    FieldSpec(
-        name='x_commercial_down_payment',
-        ttype='float',
-        label=_t('Down Payment', 'Down Payment'),
-        help=_t('down payment for the purchase of the business in euros (goodwill).', 'down payment for the purchase of the business in euros (goodwill).'),
-        # source: data.prices.countrySpecific.be.commercial.downPayment
     ),
 )
 
@@ -3971,7 +4781,7 @@ DERIVED_SPACES_FIELDS: tuple[FieldSpec, ...] = (
     ),
 )
 
-# ---- structure (80 fields) ----
+# ---- structure (82 fields) ----
 DERIVED_STRUCTURE_FIELDS: tuple[FieldSpec, ...] = (
     FieldSpec(
         name='x_attic',
@@ -3984,6 +4794,44 @@ DERIVED_STRUCTURE_FIELDS: tuple[FieldSpec, ...] = (
         SelectionOption('CONVERTIBLE', _t('Convertible', 'Convertible'), 2),
         ),
         # source: data.structure.building.attic
+    ),
+    FieldSpec(
+        name='x_balcony_direction',
+        ttype='selection',
+        label=_t('Balcony Direction', 'Balcony Direction'),
+        help=_t('cardinal and ordinal geographical directions', 'cardinal and ordinal geographical directions'),
+        selection=(
+        SelectionOption('NORTH', _t('North', 'North'), 0),
+        SelectionOption('EAST', _t('East', 'East'), 1),
+        SelectionOption('SOUTH', _t('South', 'South'), 2),
+        SelectionOption('WEST', _t('West', 'West'), 3),
+        SelectionOption('NORTH_EAST', _t('North East', 'North East'), 4),
+        SelectionOption('SOUTH_EAST', _t('South East', 'South East'), 5),
+        SelectionOption('NORTH_WEST', _t('North West', 'North West'), 6),
+        SelectionOption('SOUTH_WEST', _t('South West', 'South West'), 7),
+        SelectionOption('EAST_WEST', _t('East West', 'East West'), 8),
+        SelectionOption('SOUTH_NORTH', _t('South North', 'South North'), 9),
+        ),
+        # source: data.structure.building.balconyDirection
+    ),
+    FieldSpec(
+        name='x_garden_orientation',
+        ttype='selection',
+        label=_t('Garden Orientation', 'Garden Orientation'),
+        help=_t('cardinal and ordinal geographical directions', 'cardinal and ordinal geographical directions'),
+        selection=(
+        SelectionOption('NORTH', _t('North', 'North'), 0),
+        SelectionOption('EAST', _t('East', 'East'), 1),
+        SelectionOption('SOUTH', _t('South', 'South'), 2),
+        SelectionOption('WEST', _t('West', 'West'), 3),
+        SelectionOption('NORTH_EAST', _t('North East', 'North East'), 4),
+        SelectionOption('SOUTH_EAST', _t('South East', 'South East'), 5),
+        SelectionOption('NORTH_WEST', _t('North West', 'North West'), 6),
+        SelectionOption('SOUTH_WEST', _t('South West', 'South West'), 7),
+        SelectionOption('EAST_WEST', _t('East West', 'East West'), 8),
+        SelectionOption('SOUTH_NORTH', _t('South North', 'South North'), 9),
+        ),
+        # source: data.structure.building.gardenOrientation
     ),
     FieldSpec(
         name='x_barrier_free',
@@ -4023,7 +4871,7 @@ DERIVED_STRUCTURE_FIELDS: tuple[FieldSpec, ...] = (
     FieldSpec(
         name='x_bath_window',
         ttype='selection',
-        label=_t('Window', 'Window'),
+        label=_t('Bath Window', 'Bath Window'),
         selection=(
         SelectionOption('YES', _t('Yes', 'Yes'), 0),
         SelectionOption('NO', _t('No', 'No'), 1),
@@ -4495,7 +5343,7 @@ DERIVED_STRUCTURE_FIELDS: tuple[FieldSpec, ...] = (
     FieldSpec(
         name='x_rooms_number_of_units',
         ttype='integer',
-        label=_t('Number Of Units', 'Number Of Units'),
+        label=_t('Rooms Number Of Units', 'Rooms Number Of Units'),
         help=_t('number of units (residential or commercial)', 'number of units (residential or commercial)'),
         # source: data.structure.rooms.numberOfUnits
     ),
@@ -4596,7 +5444,7 @@ DERIVED_STRUCTURE_FIELDS: tuple[FieldSpec, ...] = (
     FieldSpec(
         name='x_parking_lots_garage',
         ttype='integer',
-        label=_t('Garage', 'Garage'),
+        label=_t('Parking Lots Garage', 'Parking Lots Garage'),
         help=_t('number of garages (building for parking one vehicle usually with a vertical rolling door)', 'number of garages (building for parking one vehicle usually with a vertical rolling door)'),
         # source: data.structure.parkingLots.garage
     ),
@@ -4678,6 +5526,214 @@ DERIVED_STRUCTURE_FIELDS: tuple[FieldSpec, ...] = (
     ),
 )
 
+# ---- texts (34 fields) ----
+DERIVED_TEXTS_FIELDS: tuple[FieldSpec, ...] = (
+    FieldSpec(
+        name='x_headline_en',
+        ttype='text',
+        label=_t('Headline En', 'Headline En'),
+        # source: data.texts.headline.en
+    ),
+    FieldSpec(
+        name='x_headline_fr',
+        ttype='text',
+        label=_t('Headline Fr', 'Headline Fr'),
+        # source: data.texts.headline.fr
+    ),
+    FieldSpec(
+        name='x_description_en',
+        ttype='text',
+        label=_t('Description En', 'Description En'),
+        # source: data.texts.description.en
+    ),
+    FieldSpec(
+        name='x_description_fr',
+        ttype='text',
+        label=_t('Description Fr', 'Description Fr'),
+        # source: data.texts.description.fr
+    ),
+    FieldSpec(
+        name='x_features_en',
+        ttype='text',
+        label=_t('Features En', 'Features En'),
+        # source: data.texts.features.en
+    ),
+    FieldSpec(
+        name='x_features_fr',
+        ttype='text',
+        label=_t('Features Fr', 'Features Fr'),
+        # source: data.texts.features.fr
+    ),
+    FieldSpec(
+        name='x_extended_information_en',
+        ttype='text',
+        label=_t('Extended Information En', 'Extended Information En'),
+        # source: data.texts.extendedInformation.en
+    ),
+    FieldSpec(
+        name='x_extended_information_fr',
+        ttype='text',
+        label=_t('Extended Information Fr', 'Extended Information Fr'),
+        # source: data.texts.extendedInformation.fr
+    ),
+    FieldSpec(
+        name='x_area_en',
+        ttype='text',
+        label=_t('Area En', 'Area En'),
+        # source: data.texts.area.en
+    ),
+    FieldSpec(
+        name='x_area_fr',
+        ttype='text',
+        label=_t('Area Fr', 'Area Fr'),
+        # source: data.texts.area.fr
+    ),
+    FieldSpec(
+        name='x_metro_en',
+        ttype='text',
+        label=_t('Metro En', 'Metro En'),
+        # source: data.texts.transportation.metro.en
+    ),
+    FieldSpec(
+        name='x_metro_fr',
+        ttype='text',
+        label=_t('Metro Fr', 'Metro Fr'),
+        # source: data.texts.transportation.metro.fr
+    ),
+    FieldSpec(
+        name='x_bus_en',
+        ttype='text',
+        label=_t('Bus En', 'Bus En'),
+        # source: data.texts.transportation.bus.en
+    ),
+    FieldSpec(
+        name='x_bus_fr',
+        ttype='text',
+        label=_t('Bus Fr', 'Bus Fr'),
+        # source: data.texts.transportation.bus.fr
+    ),
+    FieldSpec(
+        name='x_tramway_en',
+        ttype='text',
+        label=_t('Tramway En', 'Tramway En'),
+        # source: data.texts.transportation.tramway.en
+    ),
+    FieldSpec(
+        name='x_tramway_fr',
+        ttype='text',
+        label=_t('Tramway Fr', 'Tramway Fr'),
+        # source: data.texts.transportation.tramway.fr
+    ),
+    FieldSpec(
+        name='x_road_en',
+        ttype='text',
+        label=_t('Road En', 'Road En'),
+        # source: data.texts.transportation.road.en
+    ),
+    FieldSpec(
+        name='x_road_fr',
+        ttype='text',
+        label=_t('Road Fr', 'Road Fr'),
+        # source: data.texts.transportation.road.fr
+    ),
+    FieldSpec(
+        name='x_highway_en',
+        ttype='text',
+        label=_t('Highway En', 'Highway En'),
+        # source: data.texts.transportation.highway.en
+    ),
+    FieldSpec(
+        name='x_highway_fr',
+        ttype='text',
+        label=_t('Highway Fr', 'Highway Fr'),
+        # source: data.texts.transportation.highway.fr
+    ),
+    FieldSpec(
+        name='x_public_bike_system_en',
+        ttype='text',
+        label=_t('Public Bike System En', 'Public Bike System En'),
+        # source: data.texts.transportation.publicBikeSystem.en
+    ),
+    FieldSpec(
+        name='x_public_bike_system_fr',
+        ttype='text',
+        label=_t('Public Bike System Fr', 'Public Bike System Fr'),
+        # source: data.texts.transportation.publicBikeSystem.fr
+    ),
+    FieldSpec(
+        name='x_public_parking_en',
+        ttype='text',
+        label=_t('Public Parking En', 'Public Parking En'),
+        # source: data.texts.transportation.publicParking.en
+    ),
+    FieldSpec(
+        name='x_public_parking_fr',
+        ttype='text',
+        label=_t('Public Parking Fr', 'Public Parking Fr'),
+        # source: data.texts.transportation.publicParking.fr
+    ),
+    FieldSpec(
+        name='x_r_e_r_en',
+        ttype='text',
+        label=_t('R E R En', 'R E R En'),
+        # source: data.texts.transportation.countrySpecific.fr.RER.en
+    ),
+    FieldSpec(
+        name='x_r_e_r_fr',
+        ttype='text',
+        label=_t('R E R Fr', 'R E R Fr'),
+        # source: data.texts.transportation.countrySpecific.fr.RER.fr
+    ),
+    FieldSpec(
+        name='x_s_n_c_f_en',
+        ttype='text',
+        label=_t('S N C F En', 'S N C F En'),
+        # source: data.texts.transportation.countrySpecific.fr.SNCF.en
+    ),
+    FieldSpec(
+        name='x_s_n_c_f_fr',
+        ttype='text',
+        label=_t('S N C F Fr', 'S N C F Fr'),
+        # source: data.texts.transportation.countrySpecific.fr.SNCF.fr
+    ),
+    FieldSpec(
+        name='x_s_n_c_f_fret_en',
+        ttype='text',
+        label=_t('S N C F Fret En', 'S N C F Fret En'),
+        # source: data.texts.transportation.countrySpecific.fr.SNCFFret.en
+    ),
+    FieldSpec(
+        name='x_s_n_c_f_fret_fr',
+        ttype='text',
+        label=_t('S N C F Fret Fr', 'S N C F Fret Fr'),
+        # source: data.texts.transportation.countrySpecific.fr.SNCFFret.fr
+    ),
+    FieldSpec(
+        name='x_noctilien_en',
+        ttype='text',
+        label=_t('Noctilien En', 'Noctilien En'),
+        # source: data.texts.transportation.countrySpecific.fr.noctilien.en
+    ),
+    FieldSpec(
+        name='x_noctilien_fr',
+        ttype='text',
+        label=_t('Noctilien Fr', 'Noctilien Fr'),
+        # source: data.texts.transportation.countrySpecific.fr.noctilien.fr
+    ),
+    FieldSpec(
+        name='x_airport_shuttle_en',
+        ttype='text',
+        label=_t('Airport Shuttle En', 'Airport Shuttle En'),
+        # source: data.texts.transportation.countrySpecific.fr.airportShuttle.en
+    ),
+    FieldSpec(
+        name='x_airport_shuttle_fr',
+        ttype='text',
+        label=_t('Airport Shuttle Fr', 'Airport Shuttle Fr'),
+        # source: data.texts.transportation.countrySpecific.fr.airportShuttle.fr
+    ),
+)
+
 DERIVED_FIELD_GROUPS: tuple[tuple[dict, tuple[FieldSpec, ...]], ...] = (
     (_t('Building program', 'Programme immobilier'), DERIVED_BUILDING_PROPERTY_FIELDS),
     (_t('Conditions', 'Conditions'), DERIVED_CONDITIONS_FIELDS),
@@ -4686,6 +5742,7 @@ DERIVED_FIELD_GROUPS: tuple[tuple[dict, tuple[FieldSpec, ...]], ...] = (
     (_t('Distribution type', 'Type de distribution'), DERIVED_DISTRIBUTION_TYPE_FIELDS),
     (_t('Energy', 'Énergie'), DERIVED_ENERGY_FIELDS),
     (_t('Estate sub-type', 'Sous-type de bien'), DERIVED_ESTATE_SUB_TYPE_FIELDS),
+    (_t('Estate type', 'Type de bien'), DERIVED_ESTATE_TYPE_FIELDS),
     (_t('Features', 'Caractéristiques'), DERIVED_FEATURES_FIELDS),
     (_t('Location', 'Localisation'), DERIVED_LOCATION_FIELDS),
     (_t('Management', 'Gestion'), DERIVED_MANAGEMENT_FIELDS),
@@ -4693,4 +5750,5 @@ DERIVED_FIELD_GROUPS: tuple[tuple[dict, tuple[FieldSpec, ...]], ...] = (
     (_t('Prices', 'Prix'), DERIVED_PRICES_FIELDS),
     (_t('Spaces', 'Surfaces'), DERIVED_SPACES_FIELDS),
     (_t('Structure', 'Structure'), DERIVED_STRUCTURE_FIELDS),
+    (_t('Description', 'Description'), DERIVED_TEXTS_FIELDS),
 )

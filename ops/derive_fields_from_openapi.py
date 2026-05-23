@@ -29,37 +29,6 @@ OUTPUT_PATH = REPO_ROOT / "seloger" / "odoo" / "provision" / "derived_field_spec
 
 # Paths we deliberately omit from the generated set.
 SKIP_PREFIXES = (
-    # Country-specific blocks that don't apply to a SeLoger / French flow.
-    "data.location.countrySpecific.de",
-    "data.location.countrySpecific.at",
-    "data.location.countrySpecific.ch",
-    "data.location.countrySpecific.it",
-    "data.location.countrySpecific.es",
-    "data.location.countrySpecific.pl",
-    "data.prices.countrySpecific.de",
-    "data.prices.countrySpecific.at",
-    "data.prices.countrySpecific.ch",
-    "data.prices.countrySpecific.it",
-    "data.prices.countrySpecific.es",
-    "data.prices.countrySpecific.pl",
-    "data.spaces.countrySpecific.de",
-    "data.spaces.countrySpecific.at",
-    "data.spaces.countrySpecific.ch",
-    "data.spaces.countrySpecific.it",
-    "data.spaces.countrySpecific.es",
-    "data.spaces.countrySpecific.pl",
-    "data.energy.countrySpecific.de",
-    "data.energy.countrySpecific.at",
-    "data.energy.countrySpecific.ch",
-    "data.energy.countrySpecific.it",
-    "data.energy.countrySpecific.es",
-    "data.energy.countrySpecific.pl",
-    "data.features.countrySpecific.de",
-    "data.features.countrySpecific.at",
-    "data.features.countrySpecific.ch",
-    "data.features.countrySpecific.it",
-    "data.features.countrySpecific.es",
-    "data.features.countrySpecific.pl",
     # Portal-specific contact blocks (handled via Aviv Contact API later).
     "specific",
     # Top-level arrays modelled separately.
@@ -67,6 +36,12 @@ SKIP_PREFIXES = (
     "media",
     "data.links",
 )
+
+# Country-specific blocks: keep only ``.fr`` (the seloger primary market) at
+# any depth. Anything matching ``countrySpecific.<other>`` is dropped. Use
+# a substring check rather than a prefix list so we catch nested blocks
+# (e.g. ``data.prices.buy.countrySpecific.at.*``) as well as top-level ones.
+COUNTRY_SPECIFIC_RE = re.compile(r"\bcountrySpecific\.([a-z]{2})\b")
 
 # Property paths that should be kept even if the type is ``array`` (we'll
 # still emit them as text columns to preserve the data round-trip via JSON).
@@ -144,14 +119,34 @@ def main() -> int:
 # Schema walking
 # ---------------------------------------------------------------------------
 def _walk(node, path, schemas, leaves, depth=0):
-    if depth > 10 or not isinstance(node, dict):
+    if depth > 12 or not isinstance(node, dict):
         return
 
     if "$ref" in node:
         ref = node["$ref"].split("/")[-1]
+        # MultiLingualText has 184 ISO-639-1 language codes as properties;
+        # walking it naively creates 184 leaves per text slot (≥3000 fields
+        # total). Collapse to two explicit slots — English (en) and French
+        # (fr) — which mirror the runtime translation layout.
+        if ref == "MultiLingualText":
+            _emit_multilingual_leaves(path, node, leaves)
+            return
         target = schemas.get(ref)
         if target:
             _walk(target, path, schemas, leaves, depth + 1)
+        return
+
+    # ``allOf`` is the AVIV schema's main composition primitive — every price
+    # block is e.g. ``{allOf: [PriceCommon, PriceInformation], description}``.
+    # Walk each branch with the *same* path so the leaves are emitted as
+    # children of the parent block. ``anyOf`` / ``oneOf`` are discriminated
+    # unions, not compositions — flattening them merges incompatible shapes
+    # and explodes the leaf count, so we skip them and rely on
+    # ``additionalProperties=True`` on the runtime Pydantic side to pass
+    # through any union variants the user actually writes.
+    if "allOf" in node:
+        for branch in node["allOf"]:
+            _walk(branch, path, schemas, leaves, depth + 1)
         return
 
     node_type = node.get("type")
@@ -193,10 +188,38 @@ def _walk(node, path, schemas, leaves, depth=0):
         return
 
 
+MULTILINGUAL_LANGS = ("en", "fr")
+
+
+def _emit_multilingual_leaves(path: list[str], node: dict, leaves: list) -> None:
+    """Emit one long-form ``text`` leaf per supported language for a
+    MultiLingualText slot. The synthetic maxLength forces the ``text`` ttype
+    branch in :func:`_ttype_and_size` so the Odoo widget is a textarea, not
+    a single-line char input."""
+
+    description = node.get("description") or ""
+    for lang in MULTILINGUAL_LANGS:
+        leaves.append({
+            "path": ".".join(path + [lang]),
+            "kind": "string",
+            "format": None,
+            "maxLength": 10000,  # ≥256 → resolves to Odoo ``text``
+            "title": None,
+            "description": description,
+            "default": None,
+        })
+
+
 def _should_skip(path: str) -> bool:
     if path in SKIP_ENUMS_BY_PATH:
         return True
-    return any(path == p or path.startswith(p + ".") for p in SKIP_PREFIXES)
+    if any(path == p or path.startswith(p + ".") for p in SKIP_PREFIXES):
+        return True
+    # Country-specific blocks: keep only ``.fr`` anywhere in the path.
+    for match in COUNTRY_SPECIFIC_RE.finditer(path):
+        if match.group(1).lower() != "fr":
+            return True
+    return False
 
 
 # ---------------------------------------------------------------------------
@@ -295,6 +318,21 @@ def _ttype_and_size(leaf: dict) -> tuple[str, int | None]:
 
 
 def _english_label(leaf: dict) -> str:
+    """Build a human-readable English label.
+
+    Source of truth is the *assigned* Odoo field name (``odoo_name``), which
+    has already been disambiguated by the shortest-unique-suffix algorithm.
+    This guarantees the label inherits that uniqueness — no more ten "Amount"
+    fields on the form.
+
+    Falls back to the OpenAPI ``title`` (rarely present in v4) or the path's
+    leaf segment when ``odoo_name`` is missing.
+    """
+
+    odoo_name = leaf.get("odoo_name")
+    if odoo_name:
+        # ``x_buy_price_amount`` → ``Buy Price Amount``.
+        return re.sub(r"_+", " ", odoo_name.removeprefix("x_")).title()
     if title := (leaf.get("title") or "").strip():
         return title
     last = leaf["path"].rsplit(".", 1)[-1]
